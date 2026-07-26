@@ -1,0 +1,169 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Accueil - LCM">
+  <!-- BLOC1: HERO, BLOC A1 et B1-->
+  <section id="accueil" class="hero scroll-reveal">
+    <div class="hero-left">
+		<h1 class="main-title">L'art de la Comédie Musicale</h1>
+		<h2 class="intro-label">École à Saint-Maximin-la-Sainte-Baume (83)</h2>
+		<div class="divider"></div>
+		<h2 class="disciplines"> Chant · Danse · Théâtre</h2>
+		<h2 class="age"> Enfants · Ados · Adultes</h2>
+		<p class="poetic"> De l'ombre à la lumière ✨ </p>
+			
+		</p>
+	
+	</div>
+
+    <div class="hero-right">
+		 <img class="affiche" src="/images/logo.jpeg" alt="Affiche LCM" />
+	</div>
+  </section>
+
+  <!-- Démarcation blanche (séparateur) -->
+  <div class="separator"></div>
+
+    <!-- BLOC2: Actus -->
+
+<section id="actualites" class="actus-section scroll-reveal">
+
+  <div class="actus-slider">
+
+    <div class="actus-track">
+
+      <div class="actus-slide slide1">
+		<div class="actus-label">Actualités</div>
+        <h2>Forum des associations</h2>
+        <p>Retrouvez-nous au forum des associations pour découvrir LCM et rencontrer l’équipe.</p>
+      </div>
+
+      <div class="actus-slide slide2">
+        <div class="actus-label">Actualités</div>
+		<h2>Inscriptions 2026 ouvertes</h2>
+        <p>Les inscriptions pour la saison 2026 sont officiellement ouvertes !</p>
+        <a href="/tarifs" class="cta-button">
+			Je m'inscris 🎉
+		</a>
+	  </div>
+
+      <div class="actus-slide slide3">
+        <div class="actus-label">Actualités</div>
+		<h2>À venir...</h2>
+        <p>De nouveaux projets et spectacles sont en préparation.</p>
+      </div>
+
+    </div>
+
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- BLOC3: Cartes pages -->
+
+<section id="presentation" class="bloc3 scroll-reveal">
+
+  <div class="card">
+    <h3>Nos Cours</h3>
+    <p>
+      Découvrez nos cours de comédie musicale alliant chant, danse et théâtre,
+      adaptés à tous les niveaux.
+    </p>
+    <a href="/planning" class="card-button">Découvrir</a>
+  </div>
+
+  <div class="card">
+    <h3>Notre équipe</h3>
+    <p>
+      Une équipe passionnée et professionnelle pour accompagner chaque élève
+      avec exigence et bienveillance.
+    </p>
+    <a href="/equipe" class="card-button">En savoir plus</a>
+  </div>
+
+  <div class="card">
+    <h3>Tarifs & inscriptions</h3>
+    <p>
+      Retrouvez toutes les informations pratiques pour rejoindre LCM et vivre
+      l’expérience de la scène.
+    </p>
+    <a href="/tarifs" class="card-button">Je m'inscris</a>
+  </div>
+
+</section>
+
+    <!-- BLOC4: Contact -->
+
+<section id="contact" class="bloc4 scroll-reveal">
+
+<div class="bloc4-left">
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5792.685421026857!2d5.852465215093448!3d43.45344188417966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9702815b63b0f%3A0x512551ec03230eec!2sMairie%20de%20Saint-Maximin-la-Sainte-Baume%2083470!5e0!3m2!1sfr!2sfr!4v1771200622867!5m2!1sfr!2sfr"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mairie de Saint-Maximin-la-Sainte-Baume"
+    ></iframe>
+  </div>
+</div>
+
+  <div class="bloc4-right">
+
+    <div class="contact-label">Contact & Infos</div>
+
+    <div class="contact-item">
+       📍 Local blablabla <br />
+	       XXX rue du machin <br />
+		   83470 Saint-Maximin-la-Sainte-Baume
+    </div>
+
+    <div class="contact-item">
+      📞 06 00 00 00 00
+    </div>
+
+    <div class="contact-item">
+      📧 
+      <a href="mailto:contact@lcm.fr" class="mail-link">
+        contact@lcm.fr
+      </a>
+    </div>
+
+<div class="social-icons">
+
+  <a href="#" target="_blank" aria-label="Instagram" class="social-icon">
+    <!-- Instagram SVG -->
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm6-1a1 1 0 110 2 1 1 0 010-2z"/>
+    </svg>
+  </a>
+
+  <a href="#" target="_blank" aria-label="Facebook" class="social-icon">
+    <!-- Facebook SVG -->
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M22 12A10 10 0 1010 21.8V14.9H7.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0022 12z"/>
+    </svg>
+  </a>
+
+  <a href="#" target="_blank" aria-label="TikTok" class="social-icon">
+    <!-- TikTok SVG -->
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M16 3a6 6 0 004 4v3a9 9 0 01-4-1.2V14a5 5 0 11-5-5c.3 0 .7 0 1 .1v3a2 2 0 102 2V3h2z"/>
+    </svg>
+  </a>
+
+</div>
+
+  </div>
+
+</section>

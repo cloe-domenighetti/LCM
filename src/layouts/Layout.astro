@@ -1,0 +1,1321 @@
+---
+const { title = "Association LCM" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+
+		html { 
+			scroll-behavior: smooth; 
+		scroll-padding-top: 180px;
+	}
+      :root {
+        --primary: #06031e;
+        --background: #fff8f5;
+        --text: #06031e;
+        --accent: #03084c; /* couleur titre / séparateurs */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--background);
+        color: var(--text);
+      }
+
+      /* =========================
+         HEADER (Bandeau haut)
+         ========================= */
+      header {
+        background: var(--primary);
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 2rem 0 0; /* collé à gauche */
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+      }
+
+      .logo-mini {
+        height: 90px;
+        width: auto;
+        display: block;
+        margin: 0;
+      }
+
+	  .header-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 2rem 0 0.5rem 0;
+	  }
+
+	  .location {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 0.85rem;
+	  }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* =========================
+         Séparateur sous header
+         ========================= */
+      .top-separator {
+        height: 10px;
+        background: linear-gradient(to bottom, var(--accent), white);
+		position: sticky;
+		top: 90px;
+		z-index: 999;
+      }
+
+      /* =========================
+         MAIN
+         ========================= */
+      main {
+        padding: 0;
+      }
+
+	  /* =========================
+   Animation Scroll
+========================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+      /* =========================================================
+         BLOC 1 (A1 + B1)  = HERO
+         ========================================================= */
+      .hero {
+        display: flex;
+		align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 70vh;
+        background: white;
+        padding: 1rem 1.2rem;
+      }
+
+      /* -------------------------
+         BLOC A1 (Texte gauche)
+         ------------------------- */
+      .hero-left {
+        flex: 1.6;
+        min-width: 280px;
+        max-width: none; /* un peu plus large pour remplir */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /*gap: 1.3rem;*/
+		padding-top: 1.5rem;
+        background: transparent;
+      }
+
+      /* (A1) styles du contenu texte */
+      .intro-label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 1.3rem;
+        color: #03084c;
+		margin: 0;
+		padding-top: 1.5rem;
+		padding-left: 20px ;
+      }
+
+      .main-title {
+        font-family: "Parisienne", cursive;
+        font-size: 4.5rem; /* ↑ augmente bien l'impact */
+        line-height: 1.05;
+        color: var(--accent);
+        padding-left: 20px ;
+		padding-top: 1.5rem;
+      }
+
+      .divider {
+        width: 70px;
+        height: 4px;
+        background: var(--accent);
+        margin: 1.6rem 0 0.8rem 0;
+		margin-left: 20px;
+      }
+
+      .disciplines {
+        /* font-weight: normal;*/
+		font-family: "Parisienne", cursive;
+        letter-spacing: 3px;
+        margin: 0;
+        color: #731e61;
+        font-size: 2.2rem; /* ↑ plus grand */
+		padding-top: 2.2rem;
+		padding-left: 20px;
+      }
+
+	  .age {
+        font-weight: bold;
+        letter-spacing: 2.2px;
+        margin: 0;
+        color: #731e61;
+        font-size: 1.2rem; /* ↑ plus grand */
+		padding-top: 1rem;
+		padding-left: 20px;;
+      }
+
+
+      /* IMPORTANT: on garde UNE seule règle .poetic (corrigée) */
+      .poetic {
+        margin: 0;
+        font-style: italic;
+        color: #666;
+        font-size: 1.25rem; /* ← corrigé (remplace 1.2re3) */
+        max-width: 560px;
+		padding-top: 1.5rem;
+		padding-left: 20px;
+      }
+
+      /* (Optionnel) si tu as encore des h1/h2 bruts ailleurs */
+      .hero-left h1,
+      .hero-left h2 {
+        margin: 0;
+      }
+
+      /* -------------------------
+         BLOC B1 (Image droite)
+         ------------------------- */
+      .hero-right {
+        flex: 1;
+        min-width: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .affiche {
+        width: min(600px, 100%); /* ↑ plus grande que 520px */
+        height: auto;
+        display: block;
+        box-shadow: -12px 0 30px rgba(3, 8, 76, 0.45),
+          12px 0 30px rgba(3, 8, 76, 0.25);
+      }
+
+      /* =========================
+         Séparateur + Bloc 2 (vide)
+         ========================= */
+      .separator {
+        height: 30px;
+        background: #ffffff;
+      }
+
+	  /* =========================
+   BLOC 2 — ACTUALITÉS
+========================= */
+
+.actus-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.actus-slider {
+  position: relative;
+  width: 100%;
+}
+
+.actus-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.actus-slide {
+  position: relative;
+  min-width: 100%;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.actus-label {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	font-size: 1.5rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.slide1 { background: #731e61; }
+.slide2 { background: #03084c; }
+.slide3 { background: #141c87; }
+
+.actus-slide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.actus-slide p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Flèches */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+.arrow:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Points */
+.dots {
+  text-align: center;
+  margin-top: 1.5rem;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+.cta-button {
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 0.9rem 2rem;
+	background: white;
+	color: #03084c;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 40px;
+	transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+	background: #f2f2f2;
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   BLOC 3 — CARTES
+========================= */
+
+.bloc3 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background: #f9f9fb;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem 2rem;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.card-button:hover {
+  background: #050d6e;
+}
+
+
+/* =========================
+   BLOC 4 — CONTACT
+========================= */
+
+.bloc4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 2rem;
+  background: #03084c;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* A4 */
+
+.bloc4-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.map-embed {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+
+/* B4*/ 
+
+
+.bloc4-right {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+  padding-top: 5rem;
+  text-align: left;        /* ← important */
+}
+
+.contact-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.bloc4-right h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.mail-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.mail-link:hover {
+  opacity: 0.8;
+}
+
+.socials {
+  margin-top: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+/* =========================
+   PAGE ÉQUIPE — BLOC EQ.1
+========================= */
+
+.eq-hero {
+  background: white;
+  padding: 1.5rem 1.2rem 0; /* ↓ moins d’espace en haut */
+}
+
+.eq-photo-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  border: 1px solid rgba(3, 8, 76, 0.08);
+}
+
+.eq-photo {
+  width: 100%;
+  max-height: 480px;   /* 🔥 limite la hauteur */
+  object-fit: cover;   /* coupe proprement */
+  display: block;
+}
+
+.eq-banner {
+  margin: 0.8rem auto 0;
+  max-width: 1100px;
+  background: #731e61; /* 🔥 nouvelle couleur */
+  color: white;
+  border-radius: 14px;
+  padding: 0.9rem 1.2rem;
+  box-shadow: 0 12px 30px rgba(115, 30, 97, 0.35);
+  text-align: center;
+}
+
+.eq-banner p {
+  margin: 0;
+  font-family: "Parisienne", cursive;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive EQ.1 */
+@media (max-width: 700px) {
+  .eq-hero {
+    padding-top: 2rem;
+  }
+  .eq-banner p {
+    font-size: 1.7rem;
+  }
+}
+
+
+/* =========================
+   PAGE ÉQUIPE — BLOC EQ.2
+========================= */
+
+.eq2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem 2rem;
+  background: #f9f9fb;
+  flex-wrap: wrap;
+}
+
+/* EQ.A2 — Photo */
+.eq2-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.eq2-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+/* EQ.B2 — Texte */
+.eq2-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+}
+
+.eq2-name {
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.eq2-role {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.eq2-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 1.5rem 0;
+}
+
+.eq2-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .eq2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .eq2-right {
+    text-align: center;
+  }
+
+  .eq2-divider {
+    margin: 1.5rem auto;
+  }
+}
+
+.eq2-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #666;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* =========================
+   PAGE ÉQUIPE — BLOC EQ.3
+========================= */
+
+.eq3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem 2rem;
+  background: white;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* 🔥 centre le bloc */
+}
+
+/* Texte à gauche */
+.eq3-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  padding-left: 1rem; /* petit décalage élégant */
+}
+
+.eq3-name {
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.eq3-role {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.eq3-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 1.5rem 0;
+}
+
+.eq3-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.eq3-quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #666;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* Photo à droite */
+.eq3-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.eq3-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .eq3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .eq3-divider {
+    margin: 1.5rem auto;
+  }
+
+  .eq3-quote {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .eq3-right {
+    justify-content: center; /* recentre sur mobile */
+    padding-right: 0;
+  }
+}
+
+/* =========================
+   PAGE PLANNING — HERO
+========================= */
+.planning-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1.5rem;
+  text-align: left;
+}
+
+.planning-title {
+  font-family: "Parisienne", cursive;
+  font-size: 4rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+.planning-subtitle {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* =========================
+   PAGE PLANNING — GRILLE
+========================= */
+.planning-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+/* =========================
+   CARTES HORIZONTALES
+========================= */
+.planning-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  min-height: 170px;
+  border: 1px solid rgba(3, 8, 76, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.planning-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.pc-photo {
+  width: 100%;
+  height: 100%;
+  background: #f3f3f6;
+}
+
+.pc-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* compact + joli */
+  display: block;
+}
+
+/* contenu */
+.pc-content {
+  padding: 1.2rem 1.2rem 1.1rem;
+}
+
+/* .pc-title {
+  font-family: "Parisienne", cursive;
+  font-size: 2.2rem;
+  margin: 0;
+  color: var(--accent);
+  line-height: 1.05;
+} */
+
+      .pc-title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.3rem;
+        color: #731e61;
+		margin: 0;
+		padding-top: 0.5rem;
+		padding-bottom: 0.8rem;
+		padding-left: 0px ;
+      }
+
+.pc-meta {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pc-meta span {
+  color: #222;
+  font-weight: bold;
+}
+
+.pc-times {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  color: #444;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.pc-times li {
+  margin-bottom: 0.35rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  .planning-grid {
+    grid-template-columns: 1fr;
+  }
+  .planning-title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .planning-card {
+    grid-template-columns: 120px 1fr;
+    min-height: 150px;
+  }
+  .pc-title {
+    font-size: 1.9rem;
+  }
+}
+
+
+/* =========================
+   PAGE TARIFS — T1
+========================= */
+.tarifs-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.4rem 2rem 0.6rem;
+}
+
+.tarifs-title {
+  font-family: "Parisienne", cursive;
+  font-size: 4rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+.tarifs-subtitle {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+/* Grille des cards */
+.tarifs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.tarif-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(3, 8, 76, 0.08);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.tarif-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.tarif-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(115, 30, 97, 0.12);
+  color: #731e61;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.tarif-name {
+  font-family: "Parisienne", cursive;
+  color: var(--accent);
+  font-size: 2.3rem;
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.tarif-price {
+  margin: 0.8rem 0 1rem;
+  color: #444;
+  text-align: center;
+}
+
+.tarif-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.tarif-cta {
+  margin-top: 1.2rem;
+  display: inline-block;
+  text-align: center;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  background: #731e61;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.tarif-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(115, 30, 97, 0.25);
+}
+
+/* Card mise en avant */
+.tarif-card.featured {
+  border: 2px solid rgba(115, 30, 97, 0.35);
+}
+
+/* Extras */
+.tarifs-extras {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.extra-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.6rem 1.6rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(3, 8, 76, 0.08);
+}
+
+.extra-card h3 {
+  margin: 0 0 0.7rem;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+.extra-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.extra-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #731e61;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .tarifs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .tarifs-title { font-size: 3.2rem; }
+  .tarifs-grid { grid-template-columns: 1fr; }
+  .tarifs-extras { grid-template-columns: 1fr; }
+}
+
+
+/* =========================
+   TARIFS — T2 INSCRIPTION
+========================= */
+
+.inscription-section {
+  background: #f9f9fb;
+  padding: 3rem 2rem 5rem;
+}
+
+.inscription-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inscription-title {
+  font-family: "Parisienne", cursive;
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.inscription-intro {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.inscription-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.step-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(3, 8, 76, 0.08);
+  text-align: left; /* garde le texte aligné à gauche */;
+}
+
+.step-card .inscription-button {
+  margin: 0.3rem 0 0;
+  display: block;      /* devient block */
+  width: inline-block;;  /* prend juste sa largeur */
+}
+
+.step-card h3 {
+  margin-top: 0;
+  color: #731e61;
+}
+
+.step-card ul {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.inscription-validation {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 16px;
+  border-left: 5px solid #731e61;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.inscription-button {
+  display: block;
+  background: rgba(115, 30, 97, 0.12);
+  color: #731e61;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid rgba(115, 30, 97, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.15s ease;
+  text-align: center;
+}
+
+.inscription-button:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(115, 30, 97, 0.2);
+}
+
+.inscription-note {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.documents-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-top: 1.2rem;
+}
+
+.small-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inscription-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .inscription-title {
+    font-size: 3rem;
+  }
+}
+
+
+      /* =========================
+         FOOTER
+         ========================= */
+      footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      /* =========================
+         Responsive (on touche plus tard si tu veux)
+         ========================= */
+      @media (max-width: 900px) {
+        header {
+          padding-right: 1rem;
+        }
+
+        .hero {
+          flex-direction: column;
+          align-items: stretch;
+          min-height: auto;
+          padding: 2rem 1.5rem;
+        }
+
+        .hero-right {
+          justify-content: center;
+        }
+
+        .main-title {
+          font-size: 3.8rem; /* évite que ça déborde */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="/images/logo_mini.jpeg" alt="Logo LCM" class="logo-mini" />	
+	
+	  <div class="header-right">
+	    <nav>
+		  <a href="/">Accueil</a>
+		  <a href="/#actualites">Actualités</a>
+		  <a href="/planning">Cours et planning</a>
+		  <a href="/equipe">L'équipe</a>
+		  <a href="/tarifs">Tarifs et inscription</a>
+		  <a href="/#contact">Contact</a>
+      </nav>
+
+	    <div class="location">
+		  Saint-Maximin-la-Sainte-Baume (83)
+	    </div>
+	  </div>
+    </header>
+
+    <div class="top-separator"></div>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>© 2026 Association LCM · Saint-Maximin-la-Sainte-Baume 83470</footer>
+  
+<script>
+  const track = document.querySelector(".actus-track");
+  const slides = document.querySelectorAll(".actus-slide");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.querySelector(".arrow.left");
+  const nextBtn = document.querySelector(".arrow.right");
+
+  let index = 0;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlider();
+    });
+  });
+</script>
+
+<script>
+  const elements = document.querySelectorAll(".scroll-reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.25
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+	
+  </body>
+</html>
