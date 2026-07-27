@@ -247,7 +247,7 @@ const { title = "Association LCM" } = Astro.props;
         background: #ffffff;
       }
 
-	  /* =========================
+/* =========================
    BLOC 2 — ACTUALITÉS
 ========================= */
 
@@ -276,30 +276,101 @@ const { title = "Association LCM" } = Astro.props;
 }
 
 .actus-label {
-	position: absolute;
-	top: 25px;
-	left: 30px;
 	font-size: 1.5rem;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	background: rgba(255,255,255,0.15);
-  padding: 6px 14px;
-  border-radius: 20px;
+	padding: 6px 14px;
+	border-radius: 20px;
+	color: white;
+}
+
+.actus-top {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	right: 30px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 100;
+	pointer-events: none;
+}
+
+.actus-more {
+	pointer-events: auto;
+
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.95rem;
+
+	padding: 8px 18px;
+
+	border: 2px solid rgba(255,255,255,0.6);
+	border-radius: 999px;
+
+	transition: all 0.3s ease;
+}
+
+.actus-more:hover {
+	background: white;
+	color: #03084c;
 }
 
 .slide1 { background: #731e61; }
 .slide2 { background: #03084c; }
 .slide3 { background: #141c87; }
+.slide4 { background: #c073af; }
+
 
 .actus-slide h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
+.actus-slide h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
 .actus-slide p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: auto;
+}
+
+.actus-programme {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.programme-item {
+  background: rgba(255,255,255,0.12);
+  padding: 1.5rem;
+  border-radius: 15px;
+  min-width: 220px;
+  max-width: 260px;
+}
+
+.programme-item h4 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.programme-item p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: white;
 }
 
 /* Flèches */
@@ -526,6 +597,20 @@ const { title = "Association LCM" } = Astro.props;
 .social-icon:hover {
   transform: scale(1.15);
   opacity: 0.8;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.contact-item .icon {
+  width: 24px;          /* toutes les icônes occupent la même largeur */
+  text-align: center;
+  flex-shrink: 0;
 }
 
 /* =========================
@@ -1200,6 +1285,313 @@ const { title = "Association LCM" } = Astro.props;
   }
 }
 
+/* =========================
+   PAGE ACTUALITES
+========================= */
+
+/* Boutons placés sous le titre de la page */
+
+.actus-navigation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.actus-navigation-button {
+  display: inline-block;
+
+  padding: 0.75rem 1.3rem;
+
+  background: rgba(115, 30, 97, 0.1);
+  color: #731e61;
+
+  border: 1px solid rgba(115, 30, 97, 0.3);
+  border-radius: 999px;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.actus-navigation-button:hover {
+  background: #731e61;
+  color: white;
+
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(115, 30, 97, 0.2);
+}
+
+
+/* Bloc général d’une actualité */
+
+.actus-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 4rem 2rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+
+  scroll-margin-top: 150px;
+
+  border-top: 1px solid rgba(3, 8, 76, 0.12);
+}
+
+
+/* Image */
+
+.actus-detail-image {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.actus-detail-image img {
+  display: block;
+
+  width: 100%;
+  max-width: 460px;
+  max-height: 600px;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  box-shadow:
+    -12px 0 30px rgba(3, 8, 76, 0.2),
+    12px 0 30px rgba(115, 30, 97, 0.15);
+}
+
+
+/* Texte */
+
+.actus-detail-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 560px;
+}
+
+.actus-detail-date {
+  margin: 0 0 0.8rem;
+
+  color: #731e61;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.actus-main-title {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.25;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.actus-event-title {
+  margin: 2.2rem 0 0.8rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.3;
+  color: #731e61;
+  font-weight: 700;
+}
+
+.actus-divider {
+  width: 70px;
+  height: 4px;
+
+  margin: 1.5rem 0;
+
+  background: #731e61;
+}
+
+.actus-detail-text p {
+  margin: 0 0 1.2rem;
+
+  color: #444;
+
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+
+/* Informations pratiques */
+
+.actus-practical-info {
+  margin: 1.5rem 0 0;
+  padding: 1.4rem 1.4rem 1.4rem 2.7rem;
+
+  background: rgba(3, 8, 76, 0.06);
+  color: #333;
+
+  border-left: 4px solid #731e61;
+  border-radius: 12px;
+
+  line-height: 1.7;
+}
+
+.actus-practical-info li {
+  margin-bottom: 0.4rem;
+}
+
+
+/* Information provisoire */
+
+.actus-coming-soon {
+  display: inline-block;
+
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+
+  background: rgba(115, 30, 97, 0.1);
+  color: #731e61;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+}
+
+
+/* Bouton d’inscription */
+
+.actus-cta {
+  display: inline-block;
+
+  margin-top: 1rem;
+  padding: 0.9rem 1.6rem;
+
+  background: #731e61;
+  color: white;
+
+  border-radius: 999px;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.actus-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(115, 30, 97, 0.28);
+}
+
+/* =========================
+   SOUS-TITRES DES ACTUALITÉS
+========================= */
+
+.actus-subtitle {
+  margin: 2.4rem 0 1rem;
+
+  color: #731e61;
+
+  font-size: 1.65rem;
+  line-height: 1.3;
+
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+
+/* Petit trait sous chaque sous-titre */
+
+.actus-subtitle::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin-top: 0.7rem;
+
+  background: rgba(115, 30, 97, 0.55);
+
+  border-radius: 999px;
+}
+
+
+/* Évite une marge trop importante
+   si le sous-titre est le premier élément */
+
+.actus-detail-text .actus-divider + .actus-subtitle {
+  margin-top: 1.6rem;
+}
+
+
+/* Espace entre plusieurs blocs de listes */
+
+.actus-practical-info + .actus-subtitle {
+  margin-top: 2.8rem;
+}
+
+
+/* Espace après les encarts */
+
+.actus-coming-soon + .actus-subtitle {
+  margin-top: 2.8rem;
+}
+
+/* =========================
+   ACTUALITES — RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .actus-detail {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+
+  /*
+    L’image doit rester au-dessus du texte sur mobile,
+    même pour les blocs où elle est à droite sur ordinateur.
+  */
+
+  .actus-image-right .actus-detail-image {
+    order: 1;
+  }
+
+  .actus-image-right .actus-detail-text {
+    order: 2;
+  }
+
+  .actus-detail-image,
+  .actus-detail-text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .actus-detail-text h2 {
+    font-size: 2.6rem;
+  }
+
+  .actus-navigation {
+    padding: 0 1.5rem 2rem;
+  }
+}
+
 
       /* =========================
          FOOTER
@@ -1214,26 +1606,51 @@ const { title = "Association LCM" } = Astro.props;
       /* =========================
          Responsive (on touche plus tard si tu veux)
          ========================= */
-      @media (max-width: 900px) {
-        header {
-          padding-right: 1rem;
-        }
+@media (max-width: 900px) {
+  header {
+    padding-right: 1rem;
+  }
 
-        .hero {
-          flex-direction: column;
-          align-items: stretch;
-          min-height: auto;
-          padding: 2rem 1.5rem;
-        }
+  /* Bloc du haut : texte puis logo */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
 
-        .hero-right {
-          justify-content: center;
-        }
+  .hero-right {
+    justify-content: center;
+  }
 
-        .main-title {
-          font-size: 3.8rem; /* évite que ça déborde */
-        }
-      }
+  .main-title {
+    font-size: 3.8rem;
+  }
+
+  /* Bloc contact : carte puis informations */
+/* Bloc contact : carte à gauche, texte à droite */
+.bloc4 {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.bloc4-left,
+.bloc4-right {
+  width: auto;
+  max-width: none;
+}
+
+.bloc4-left {
+  flex: 1.2;
+}
+
+.bloc4-right {
+  flex: 1;
+  padding-top: 4rem;
+}
     </style>
   </head>
 
@@ -1244,7 +1661,7 @@ const { title = "Association LCM" } = Astro.props;
 	  <div class="header-right">
 	    <nav>
 		  <a href="/">Accueil</a>
-		  <a href="/#actualites">Actualités</a>
+		  <a href="/actualites">Actualités</a>
 		  <a href="/planning">Cours et planning</a>
 		  <a href="/equipe">L'équipe</a>
 		  <a href="/tarifs">Tarifs et inscription</a>
@@ -1263,58 +1680,110 @@ const { title = "Association LCM" } = Astro.props;
       <slot />
     </main>
 
-    <footer>© 2026 Association LCM · Saint-Maximin-la-Sainte-Baume 83470</footer>
+    <footer>© 2026 LCM Spectacle · Saint-Maximin-la-Sainte-Baume 83470</footer>
   
 <script>
   const track = document.querySelector(".actus-track");
   const slides = document.querySelectorAll(".actus-slide");
-  const dots = document.querySelectorAll(".dot");
+  const dotsContainer = document.querySelector(".dots");
   const prevBtn = document.querySelector(".arrow.left");
   const nextBtn = document.querySelector(".arrow.right");
 
-  let index = 0;
+  if (
+    track &&
+    slides.length > 0 &&
+    dotsContainer &&
+    prevBtn &&
+    nextBtn
+  ) {
+    let index = 0;
 
-  function updateSlider() {
-    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
 
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
+      if (i === 0) {
+        dot.classList.add("active");
+      }
 
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    updateSlider();
-  });
+      dot.addEventListener("click", () => {
+        index = i;
+        updateSlider();
+      });
 
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlider();
-  });
+      dotsContainer.appendChild(dot);
+    });
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      index = i;
+    const dots = document.querySelectorAll(".dot");
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      dots.forEach((dot) => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % slides.length;
       updateSlider();
     });
-  });
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlider();
+    });
+  }
 </script>
 
 <script>
   const elements = document.querySelectorAll(".scroll-reveal");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible");
-      }
-    });
-  }, {
-    threshold: 0.25
-  });
+  const petiteFenetre = window.matchMedia("(max-width: 900px)").matches;
 
-  elements.forEach(el => observer.observe(el));
+  const premiereActualite = document.querySelector("#journee-22-aout");
+
+  /*
+    Sur petite fenêtre, la première actualité commence son animation
+    immédiatement, en même temps que le titre et les boutons.
+  */
+
+  if (petiteFenetre && premiereActualite) {
+    requestAnimationFrame(() => {
+      premiereActualite.classList.add("visible");
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+
+        /*
+          Sur petite fenêtre, la première actualité est déjà gérée
+          ci-dessus. On évite donc que l’observer la masque à nouveau.
+        */
+
+        if (
+          petiteFenetre &&
+          entry.target.id === "journee-22-aout"
+        ) {
+          return;
+        }
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.25,
+    }
+  );
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
 </script>
 	
   </body>
