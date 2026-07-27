@@ -782,24 +782,23 @@ const { title = "Association LCM" } = Astro.props;
 
       /* EQ.A2 — Photo */
       .eq2-left {
-        flex: 1;
-        min-width: 300px;
+        flex: 0 0 50%;
         display: flex;
         justify-content: center;
+        align-items: flex-start;
       }
 
       .eq2-photo {
         width: 100%;
-        max-width: 420px;
+        max-width: 330px; /* avant 420px */
         border-radius: 20px;
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
       }
 
       /* EQ.B2 — Texte */
       .eq2-right {
-        flex: 1;
-        min-width: 300px;
-        max-width: 520px;
+        flex: 0 0 50%;
+        max-width: none;
       }
 
       .eq2-name {
