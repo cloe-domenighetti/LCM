@@ -3,19 +3,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tarifs & inscription - LCM">
-
   <!-- T1: HERO -->
   <section class="tarifs-hero scroll-reveal">
     <h1 class="tarifs-title">Tarifs & inscription</h1>
     <p class="tarifs-subtitle">
-      Choisissez la formule qui correspond à votre rythme.<br>
+      Choisissez la formule qui correspond à votre rythme.<br />
       Réductions possibles pour les moins de 15 ans et les familles.
     </p>
   </section>
 
   <!-- T1: CARDS FORMULES -->
   <section class="tarifs-grid scroll-reveal">
-
     <article class="tarif-card">
       <div class="tarif-badge">Formule</div>
       <h2 class="tarif-name">1 cours / semaine</h2>
@@ -59,12 +57,10 @@ import Layout from "../layouts/Layout.astro";
       </ul>
       <a class="tarif-cta" href="/#contact">Je m’inscris</a>
     </article>
-
   </section>
 
   <!-- T1: INFOS COMPLÉMENTAIRES -->
   <section class="tarifs-extras scroll-reveal">
-
     <div class="extra-card">
       <h3>Cours particuliers</h3>
       <p>
@@ -77,100 +73,92 @@ import Layout from "../layouts/Layout.astro";
     <div class="extra-card">
       <h3>Cours d’essai</h3>
       <p>
-        Un cours d’essai est possible <strong>sur réservation</strong>, selon les places disponibles.
-        (Modalités précisées lors du contact.)
+        Un cours d’essai est possible <strong>sur réservation</strong>, selon
+        les places disponibles. (Modalités précisées lors du contact.)
       </p>
       <a class="extra-link" href="/#contact">Réserver un essai</a>
     </div>
-
   </section>
 
-<!-- T2 : MODALITÉS D’INSCRIPTION -->
-<section class="inscription-section scroll-reveal">
+  <!-- T2 : MODALITÉS D’INSCRIPTION -->
+  <section class="inscription-section scroll-reveal">
+    <div class="inscription-container">
+      <h2 class="inscription-title">Inscriptions</h2>
 
-  <div class="inscription-container">
+      <p class="inscription-intro">
+        L’inscription à l’association LCM se fait en deux étapes. La place dans
+        les cours est garantie uniquement après remise d’un dossier complet et
+        règlement.
+      </p>
 
-    <h2 class="inscription-title">Inscriptions</h2>
+      <div class="inscription-steps">
+        <!-- ÉTAPE 1 -->
+        <div class="step-card">
+          <h3>1️⃣ Télécharger et compléter les documents</h3>
 
-    <p class="inscription-intro">
-      L’inscription à l’association LCM se fait en deux étapes.
-      La place dans les cours est garantie uniquement après remise
-      d’un dossier complet et règlement.
-    </p>
+          <p>
+            Merci de télécharger, compléter et signer les documents suivants :
+          </p>
 
-    <div class="inscription-steps">
+          <div class="documents-buttons">
+            <a
+              href="/documents/feuille-inscription.pdf"
+              class="inscription-button"
+              download
+            >
+              Fiche d’inscription
+            </a>
 
-      <!-- ÉTAPE 1 -->
-      <div class="step-card">
-        <h3>1️⃣ Télécharger et compléter les documents</h3>
+            <a
+              href="/documents/reglement-interieur.pdf"
+              class="inscription-button"
+              download
+            >
+              Règlement intérieur
+            </a>
 
-        <p>
-          Merci de télécharger, compléter et signer les documents suivants :
-        </p>
+            <a
+              href="/documents/autorisation-image.pdf"
+              class="inscription-button"
+              download
+            >
+              Droit à l’image
+            </a>
 
-        <div class="documents-buttons">
-
-          <a href="/documents/feuille-inscription.pdf"
-             class="inscription-button"
-             download>
-            Fiche d’inscription
-          </a>
-
-          <a href="/documents/reglement-interieur.pdf"
-             class="inscription-button"
-             download>
-            Règlement intérieur
-          </a>
-
-          <a href="/documents/autorisation-image.pdf"
-             class="inscription-button"
-             download>
-            Droit à l’image
-          </a>
-
-          <!-- <a href="/documents/autorisation-parentale.pdf"
+            <!-- <a href="/documents/autorisation-parentale.pdf"
              class="inscription-button"
              download>
             Autorisation parentale (mineurs)
           </a> -->
+          </div>
+        </div>
 
+        <!-- ÉTAPE 2 -->
+        <div class="step-card">
+          <h3>2️⃣ Finaliser l’inscription</h3>
+
+          <ul>
+            <li>Remise du dossier complété et signé</li>
+            <li>Règlement de la cotisation annuelle</li>
+            <li>Paiement du mois de septembre (chèque ou espèces)</li>
+            <li>Mandat SEPA + RIB (si prélèvement)</li>
+            <li>Certificat médical (première inscription)</li>
+            <li>Photo portrait récente (première inscription)</li>
+            <li>Attestation assurande de responsabilité civile</li>
+          </ul>
+
+          <p class="small-note">
+            Le certificat médical, la photo et l'attestation d'assurance de
+            responsabilité civile peuvent être remis au secrétariat dans le
+            premier mois suivant l’inscription.
+          </p>
         </div>
       </div>
 
-      <!-- ÉTAPE 2 -->
-      <div class="step-card">
-        <h3>2️⃣ Finaliser l’inscription</h3>
-
-        <ul>
-          <li>Remise du dossier complété et signé</li>
-          <li>Règlement de la cotisation annuelle</li>
-          <li>Paiement du mois de septembre (chèque ou espèces)</li>
-          <li>Mandat SEPA + RIB (si prélèvement)</li>
-          <li>Certificat médical (première inscription)</li>
-          <li>Photo portrait récente (première inscription)</li>
-          <li>Attestation assurande de responsabilité civile</li>
-
-        </ul>
-
-        <p class="small-note">
-          Le certificat médical, la photo et l'attestation d'assurance de responsabilité civile peuvent être remis au secrétariat
-          dans le premier mois suivant l’inscription.
-        </p>
-
+      <div class="inscription-validation">
+        L’inscription devient définitive après réception et validation complète
+        du dossier. Aucune place ne peut être réservée sans dossier complet.
       </div>
-
     </div>
-
-    <div class="inscription-validation">
-      L’inscription devient définitive après réception et validation complète du dossier.
-      Aucune place ne peut être réservée sans dossier complet.
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
+  </section>
 </Layout>

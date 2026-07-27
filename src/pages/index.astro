@@ -3,226 +3,284 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Accueil - LCM">
-  <!-- BLOC1: HERO, BLOC A1 et B1-->
+  <!-- BLOC 1 : HERO -->
   <section id="accueil" class="hero scroll-reveal">
     <div class="hero-left">
-		<h1 class="main-title">L'art de la Comédie Musicale</h1>
-		<h2 class="intro-label">École à Saint-Maximin-la-Sainte-Baume (83)</h2>
-		<div class="divider"></div>
-		<h2 class="disciplines"> Chant · Théâtre · Chorégraphie</h2>
-		<h2 class="age"> Enfants · Ados · Adultes</h2>
-		<p class="poetic"> De l'ombre à la lumière ✨ </p> 
-			
-		</p>
-	
-	</div>
+      <h1 class="main-title">L'art de la Comédie Musicale</h1>
+      <h2 class="intro-label">École à Saint-Maximin-la-Sainte-Baume (83)</h2>
 
-    <div class="hero-right">
-		 <img class="affiche" src="/images/logo.jpeg" alt="Affiche LCM" />
-	</div>
-  </section>
+      <div class="divider"></div>
 
-  <!-- Démarcation blanche (séparateur) -->
-  <div class="separator"></div>
-
-    <!-- BLOC2: Actus -->
-
-<section id="actualites" class="actus-section scroll-reveal">
-
-  <div class="actus-top">
-    <div class="actus-label">Actualités</div>
-
-    <a href="/actualites" class="actus-more">
-        En savoir plus 🔎 →
-    </a>
-</div>
-
-  <div class="actus-slider">
-
-    <div class="actus-track">
-
-  <!-- 22 aout -->
-      <div class="actus-slide slide1">
-          <h2> Portes Ouvertes · Masterclass · Spectacle 🎤🎭<br></h2>
-          <h3> <b>· Samedi 22 Aout 2026 - Salle des Fêtes ·</b></h3>
-          <p> 🚪 Portes ouvertes : 8h30 - 12h30 <br>
-            🎓 Masterclass "Les résonnateurs" : 13h30 - 18h30 <br>
-            🎤 Spectacle "Les plus belles comédies musicales" : 20h30
-        </p>
-        </div>
-
-  <!-- masterclass 22 aout -->
-      <div class="actus-slide slide2">
-          <h2> Masterclass "Les résonnateurs" 🎓<br></h2>
-          <h3> <b>· Samedi 22 Aout 2026 · 13h30 - 18h30 · Salle des Fêtes ·</b></h3>
-          <p> <b>Découvrez le pouvoir des résonnateurs ! </b><br>
-            Explorez les secrets de la résonnance vocale et découvrez comment votre corps
-            devient un véritable instrument avec notre professeur Chris Roger !
-        </p>
-                <a href="/tarifs" class="cta-button">
-			Je m'inscris à la Masterclass 🎉
-		</a>
-        </div>
-
-  <!-- Spectacle 22 aout -->
-      <div class="actus-slide slide3">
-          <h2> Spectacle : Les plus belles comédies musicales 🎤🎭<br>
-          <h3> <b>· Samedi 22 Aout 2026 - 20h30 - Salle des Fêtes ·</b></h3>
-          <p> <b>La troupe LCM monte sur scène ! </b> <br>
-          <br>
-          Venez découvrir la troupe LCM lors d'une soirée placée sous le signe
-          de la musique, su spectacle, de l'émotion et du partage. <br>
-          <br>
-          <b> Entrée libre · Petite restauration sur place </b>
-        </p>
-        </div>
-
-  <!-- Forum des assos -->
-      <div class="actus-slide slide4">
-		      <h2>Forum des associations ✨</h2>
-          <h3> <b>· Samedi 6 eptembre 2026 </b></h3>
-          <p><b>RDV au forum des asso de Saint-Maximin pour découvrir LCM et rencontrer notre équipe ! </p> </b><br>
-          <br>
-          -- Horaire et lieu à venir --
-	    </div>
-
-  <!-- Inscriptions ouvertes -->
-      <div class="actus-slide slide1">
-		      <h2>Inscriptions 2026 ouvertes 🤩</h2>
-          <p><b>Les inscriptions pour la saison 2026 sont officiellement ouvertes 💖</p> </b><br>
-          <p>Vous hésitez encore ? Venez participer à notre masterclass et/ou assister au spectacle
-            des élèves de LCM le 22/08 ou bien nous rencontrer au forum des assos le 06/09 !</p>
-          <a href="/tarifs" class="cta-button">
-			      Je m'inscris 🎉
-		      </a>
-	    </div>
-
-<!-- A venir -->
-
-      <div class="actus-slide slide2">
-		<h2>Et bien d'autres évenènements à venir ...</h2>
-        <p><b>De nombreux projets en cours de préparation ! </b><br>
-          <br>
-          Ateliers, théatre, chorégraphie, création de spectacles, masterclass, stages ... <br>
-          <br>
-          <h3>Stay tuned 😉</h3>
-        </p>
-      </div>
-
+      <h2 class="disciplines">Chant · Théâtre · Chorégraphie</h2>
+      <h2 class="age">Enfants · Ados · Adultes</h2>
+      <p class="poetic">De l'ombre à la lumière ✨</p>
     </div>
 
-    <button class="arrow left">&#10094;</button>
-    <button class="arrow right">&#10095;</button>
+    <div class="hero-right">
+      <img class="affiche" src="/images/logo.jpeg" alt="Affiche LCM" />
+    </div>
+  </section>
 
-    <div class="dots"></div>
+  <!-- BLOC 2 : MOT DU PRÉSIDENT -->
+  <section class="president-home scroll-reveal">
+    <div class="president-home-content">
+      <p class="president-home-label">Le mot du Président</p>
 
-  </div>
+      <blockquote class="president-home-quote">
+        <em>
+          « LCM Spectacle, c’est bien plus qu’une association : c’est une scène
+          où les passions se rencontrent, où les talents se révèlent et où les
+          rêves prennent vie. »
+        </em>
+      </blockquote>
 
-</section>
+      <a href="/equipe#mot-president" class="president-home-link">
+        Découvrir le mot du Président
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
 
-    <!-- BLOC3: Cartes pages -->
+  <!-- Démarcation blanche -->
+  <div class="separator"></div>
 
-<section id="presentation" class="bloc3 scroll-reveal">
+  <!-- BLOC 3 : ACTUALITÉS -->
+  <section id="actualites" class="actus-section scroll-reveal">
+    <div class="actus-top">
+      <div class="actus-label">Actualités</div>
 
-  <div class="card">
-    <h3>Nos Cours</h3>
-    <p>
-      Découvrez nos cours de comédie musicale alliant chant, danse et théâtre,
-      adaptés à tous les niveaux.
-    </p>
-    <a href="/planning" class="card-button">Découvrir</a>
-  </div>
+      <a href="/actualites" class="actus-more"> En savoir plus 🔎 → </a>
+    </div>
 
-  <div class="card">
-    <h3>Notre équipe</h3>
-    <p>
-      Une équipe passionnée et professionnelle pour accompagner chaque élève
-      avec enthousiasme et bienveillance.
-    </p>
-    <a href="/equipe" class="card-button">En savoir plus</a>
-  </div>
+    <div class="actus-slider">
+      <div class="actus-track">
+        <!-- Journée du 22 août -->
+        <div class="actus-slide slide1">
+          <h2>Portes ouvertes · Masterclass · Spectacle 🎤🎭</h2>
 
-  <div class="card">
-    <h3>Tarifs & inscriptions</h3>
-    <p>
-      Retrouvez toutes les informations pratiques pour rejoindre LCM et vivre
-      l’expérience de la scène.
-    </p>
-    <a href="/tarifs" class="card-button">Je m'inscris</a>
-  </div>
+          <h3>
+            <b>· Samedi 22 août 2026 · Salle des Fêtes ·</b>
+          </h3>
 
-</section>
+          <p>
+            🚪 Portes ouvertes : 8h30 - 12h30<br />
+            🎓 Masterclass « Les résonateurs » : 13h30 - 18h30<br />
+            🎤 Spectacle « Les plus belles comédies musicales » : 20h30
+          </p>
+        </div>
 
-    <!-- BLOC4: Contact -->
+        <!-- Masterclass -->
+        <div class="actus-slide slide2">
+          <h2>Masterclass « Les résonateurs » 🎓</h2>
 
-<section id="contact" class="bloc4 scroll-reveal">
+          <h3>
+            <b> · Samedi 22 août 2026 · 13h30 - 18h30 · Salle des Fêtes · </b>
+          </h3>
 
-<div class="bloc4-left">
-  <div class="map-embed">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5792.685421026857!2d5.852465215093448!3d43.45344188417966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9702815b63b0f%3A0x512551ec03230eec!2sMairie%20de%20Saint-Maximin-la-Sainte-Baume%2083470!5e0!3m2!1sfr!2sfr!4v1771200622867!5m2!1sfr!2sfr"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Mairie de Saint-Maximin-la-Sainte-Baume"
-    ></iframe>
-  </div>
-</div>
+          <p>
+            <b>Découvrez le pouvoir des résonateurs !</b><br />
+            Explorez les secrets de la résonance vocale et découvrez comment votre
+            corps devient un véritable instrument aux côtés de notre professeur Chris
+            Roger !
+          </p>
 
-  <div class="bloc4-right">
+          <a href="/tarifs" class="cta-button">
+            Je m'inscris à la Masterclass 🎉
+          </a>
+        </div>
 
-    <div class="contact-label">Contact & Infos</div>
+        <!-- Spectacle -->
+        <div class="actus-slide slide3">
+          <h2>Les plus belles comédies musicales 🎤🎭</h2>
 
-<div class="contact-item">
-  <span class="icon">📍</span>
-  <span>
-    Adresse à venir<br>
-    XXX adresse à venir<br>
-    83470 Saint-Maximin-la-Sainte-Baume
-  </span>
-</div>
+          <h3>
+            <b> · Samedi 22 août 2026 · 20h30 · Salle des Fêtes · </b>
+          </h3>
 
-<div class="contact-item">
-  <span class="icon">📞</span>
-  <span>
-    06 52 92 29 35
-  </span>
-</div>
+          <p>
+            <b>La troupe LCM monte sur scène !</b><br /><br />
 
-<div class="contact-item">
-  <span class="icon">📧</span>
-  <span>
-    <a href="mailto:lcm.spectacle@gmail.com" class="mail-link">
-      lcm.spectacle@gmail.com
-    </a>
-  </span>
-</div>
+            Venez découvrir la troupe LCM lors d'une soirée placée sous le signe
+            de la musique, du spectacle, de l'émotion et du partage.
+            <br /><br />
 
-<div class="social-icons">
+            <b>Entrée libre · Petite restauration sur place</b>
+          </p>
+        </div>
 
-  <a href="#" target="_blank" aria-label="Instagram" class="social-icon">
-    <!-- Instagram SVG -->
-    <svg viewBox="0 0 24 24" fill="white">
-      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm6-1a1 1 0 110 2 1 1 0 010-2z"/>
-    </svg>
-  </a>
+        <!-- Forum des associations -->
+        <div class="actus-slide slide4">
+          <h2>Forum des associations ✨</h2>
 
-  <a href="#" target="_blank" aria-label="Facebook" class="social-icon">
-    <!-- Facebook SVG -->
-    <svg viewBox="0 0 24 24" fill="white">
-      <path d="M22 12A10 10 0 1010 21.8V14.9H7.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0022 12z"/>
-    </svg>
-  </a>
+          <h3>
+            <b>· Samedi 6 septembre 2026 ·</b>
+          </h3>
 
-  <a href="#" target="_blank" aria-label="TikTok" class="social-icon">
-    <!-- TikTok SVG -->
-    <svg viewBox="0 0 24 24" fill="white">
-      <path d="M16 3a6 6 0 004 4v3a9 9 0 01-4-1.2V14a5 5 0 11-5-5c.3 0 .7 0 1 .1v3a2 2 0 102 2V3h2z"/>
-    </svg>
-  </a>
+          <p>
+            <b>
+              Rendez-vous au forum des associations de Saint-Maximin pour
+              découvrir LCM et rencontrer notre équipe !
+            </b>
+            <br /><br />
 
-</div>
+            — Horaire et lieu à venir —
+          </p>
+        </div>
 
-  </div>
+        <!-- Inscriptions ouvertes -->
+        <div class="actus-slide slide1">
+          <h2>Inscriptions 2026 ouvertes 🤩</h2>
 
-</section>
+          <p>
+            <b>
+              Les inscriptions pour la saison 2026 sont officiellement ouvertes
+              💖
+            </b>
+            <br /><br />
+
+            Vous hésitez encore ? Venez participer à notre masterclass, assister
+            au spectacle des élèves de LCM le 22 août ou nous rencontrer au
+            forum des associations le 6 septembre !
+          </p>
+
+          <a href="/tarifs" class="cta-button"> Je m'inscris 🎉 </a>
+        </div>
+
+        <!-- À venir -->
+        <div class="actus-slide slide2">
+          <h2>Et bien d'autres événements à venir...</h2>
+
+          <p>
+            <b>De nombreux projets sont en cours de préparation !</b>
+            <br /><br />
+
+            Ateliers, théâtre, chorégraphie, création de spectacles,
+            masterclass, stages...
+          </p>
+
+          <h3>Stay tuned 😉</h3>
+        </div>
+      </div>
+
+      <!-- Les commandes doivent être en dehors de actus-track -->
+      <button
+        class="arrow left"
+        type="button"
+        aria-label="Actualité précédente"
+      >
+        &#10094;
+      </button>
+
+      <button class="arrow right" type="button" aria-label="Actualité suivante">
+        &#10095;
+      </button>
+
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <!-- BLOC 3 : CARTES -->
+  <section id="presentation" class="bloc3 scroll-reveal">
+    <div class="card">
+      <h3>Nos cours</h3>
+
+      <p>
+        Découvrez nos cours de comédie musicale alliant chant, danse et théâtre,
+        adaptés à tous les niveaux.
+      </p>
+
+      <a href="/planning" class="card-button">Découvrir</a>
+    </div>
+
+    <div class="card">
+      <h3>Notre équipe</h3>
+
+      <p>
+        Une équipe passionnée et professionnelle pour accompagner chaque élève
+        avec enthousiasme et bienveillance.
+      </p>
+
+      <a href="/equipe" class="card-button">En savoir plus</a>
+    </div>
+
+    <div class="card">
+      <h3>Tarifs & inscriptions</h3>
+
+      <p>
+        Retrouvez toutes les informations pratiques pour rejoindre LCM et vivre
+        l'expérience de la scène.
+      </p>
+
+      <a href="/tarifs" class="card-button">Je m'inscris</a>
+    </div>
+  </section>
+
+  <!-- BLOC 4 : CONTACT -->
+  <section id="contact" class="bloc4 scroll-reveal">
+    <div class="bloc4-left">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5792.685421026857!2d5.852465215093448!3d43.45344188417966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9702815b63b0f%3A0x512551ec03230eec!2sMairie%20de%20Saint-Maximin-la-Sainte-Baume%2083470!5e0!3m2!1sfr!2sfr!4v1771200622867!5m2!1sfr!2sfr"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mairie de Saint-Maximin-la-Sainte-Baume"></iframe>
+      </div>
+    </div>
+
+    <div class="bloc4-right">
+      <div class="contact-label">Contact & Infos</div>
+
+      <div class="contact-item">
+        <span class="icon">📍</span>
+
+        <span>
+          Adresse à venir<br />
+          XXX adresse à venir<br />
+          83470 Saint-Maximin-la-Sainte-Baume
+        </span>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <span>06 52 92 29 35</span>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon">📧</span>
+
+        <span>
+          <a href="mailto:lcm.spectacle@gmail.com" class="mail-link">
+            lcm.spectacle@gmail.com
+          </a>
+        </span>
+      </div>
+
+      <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Instagram" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="white">
+            <path
+              d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm6-1a1 1 0 110 2 1 1 0 010-2z"
+            ></path>
+          </svg>
+        </a>
+
+        <a href="#" target="_blank" aria-label="Facebook" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="white">
+            <path
+              d="M22 12A10 10 0 1010 21.8V14.9H7.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0022 12z"
+            ></path>
+          </svg>
+        </a>
+
+        <a href="#" target="_blank" aria-label="TikTok" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="white">
+            <path
+              d="M16 3a6 6 0 004 4v3a9 9 0 01-4-1.2V14a5 5 0 11-5-5c.3 0 .7 0 1 .1v3a2 2 0 102 2V3h2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

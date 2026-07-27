@@ -3,244 +3,176 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Actualités - LCM">
-
-  <!-- =========================
+  <div class="actualites-page scroll-reveal">
+    <!-- =========================
        TITRE DE LA PAGE
   ========================== -->
 
-  <section class="planning-hero scroll-reveal">
-    <h1 class="planning-title">Actualités</h1>
-  </section>
+    <section class="planning-hero">
+      <h1 class="planning-title">Actualités</h1>
+    </section>
 
-
-  <!-- =========================
+    <!-- =========================
        BOUTONS D’ACCÈS RAPIDE
   ========================== -->
 
-  <nav
-    class="actus-navigation scroll-reveal"
-    aria-label="Accès aux actualités"
-  >
+    <nav class="actus-navigation" aria-label="Accès aux actualités">
+      <a href="#journee-22-aout" class="actus-navigation-button">
+        22/08/2026: Portes ouvertes, Masterclass et Spectacle
+      </a>
 
-    <a
-      href="#journee-22-aout"
-      class="actus-navigation-button"
-    >
-      Journée du 22 août
-    </a>
+      <a href="#forum-associations" class="actus-navigation-button">
+        06/09/2026: Forum des associations
+      </a>
 
-    <a
-      href="#forum-associations"
-      class="actus-navigation-button"
-    >
-      Forum des associations
-    </a>
+      <a href="#inscriptions-ouvertes" class="actus-navigation-button">
+        Ouverture des inscription 2026-2027
+      </a>
+    </nav>
 
-    <a
-      href="#inscriptions-ouvertes"
-      class="actus-navigation-button"
-    >
-      Inscriptions ouvertes
-    </a>
-
-  </nav>
-
-
-  <!-- =========================
+    <!-- =========================
        ACTUALITÉ 1
        IMAGE À GAUCHE
   ========================== -->
 
-  <section
-    id="journee-22-aout"
-    class="actus-detail actus-image-left scroll-reveal"
-  >
-
-    <div class="actus-detail-image">
-
-      <img
-        src="/images/actualites/journee-22-aout.jpg"
-        alt="Flyer de la journée LCM du 22 août 2026"
-      />
-
-    </div>
-
-
-    <div class="actus-detail-text">
-
-      <p class="actus-detail-date">
-        Samedi 22 août 2026
-      </p>
-
-      <h2 class="actus-main-title">
-        Portes ouvertes, Masterclass et Spectacle
-      </h2>
-
-      <div class="actus-divider"></div>
-
-
-      <p>
-        LCM vous donne rendez-vous à la Salle des Fêtes de
-        Saint-Maximin-la-Sainte-Baume pour une journée entièrement
-        consacrée au chant, à la découverte et au spectacle.
-      </p>
-
-
-      <h3 class="actus-event-title">
-        Portes ouvertes
-      </h3>
-
-      <p>
-        Venez découvrir l’association, rencontrer notre équipe et obtenir
-        toutes les informations concernant les cours, les activités et les
-        inscriptions.
-      </p>
-
-      <ul class="actus-practical-info">
-        <li>Accueil de 8h30 à 12h30</li>
-        <li>Présentation de l’association</li>
-        <li>Rencontre avec l’équipe pédagogique</li>
-      </ul>
-
-
-      <h3 class="actus-event-title">
-        Masterclass « Les résonateurs »
-      </h3>
-
-      <p>
-        Cette masterclass vous permettra de découvrir le rôle des
-        résonateurs dans la voix et d’explorer différentes techniques
-        vocales à travers des exercices pratiques.
-      </p>
-
-      <div class="actus-coming-soon">
-        De 13h30 à 18h30
+    <section id="journee-22-aout" class="actus-detail actus-image-left">
+      <div class="actus-detail-image">
+        <img
+          src="/images/actualites/journee-22-aout.jpg"
+          alt="Flyer de la journée LCM du 22 août 2026"
+        />
       </div>
 
+      <div class="actus-detail-text">
+        <p class="actus-detail-date">Samedi 22 août 2026</p>
 
-      <h3 class="actus-event-title">
-        Spectacle des élèves de LCM
-      </h3>
+        <h2 class="actus-main-title">
+          Portes ouvertes, Masterclass et Spectacle
+        </h2>
 
-      <p>
-        La journée se terminera par un spectacle proposé par les élèves
-        de LCM, dans une ambiance conviviale et musicale.
-      </p>
+        <div class="actus-divider"></div>
 
-      <ul class="actus-practical-info">
-        <li>Début à 20h30</li>
-        <li>Entrée libre</li>
-        <li>Petite restauration sur place</li>
-      </ul>
+        <p>
+          <b
+            >LCM vous donne rendez-vous à la Salle des Fêtes de Saint-Maximin
+            pour une journée entièrement consacrée au chant, à la découverte et
+            au spectacle.</b
+          >
+        </p>
 
-    </div>
+        <h3 class="actus-event-title">Portes ouvertes · 8h30 - 12h30</h3>
 
-  </section>
+        <p>
+          Venez découvrir l’association, rencontrer notre équipe et obtenir
+          toutes les informations concernant les cours, les activités et les
+          inscriptions.
+        </p>
 
+        <h3 class="actus-event-title">
+          Masterclass « Les résonateurs » · 13h30 - 18h30
+        </h3>
 
-  <!-- =========================
+        <p>
+          <b
+            >Vous pensez que tout se joue au niveau des cordes vocales ? Et si
+            le secret d'une voix plus libre, plus puissante et expressive se
+            cachait dans vos résonateurs ?
+          </b>
+          <br /> Que vous soyez chanteur de douche ou star nationale, venez explorer
+          le rôle des résonateurs aux côtés de Chris afin d'enrichir votre timbre,
+          d'améliorer votre projection et libérer tout le potentiel de votre voix
+          !
+        </p>
+
+        <h3 class="actus-event-title">
+          Spectacle "Les plus belles comédies musicales" · 20h30
+        </h3>
+
+        <p>
+          La journée se terminera par un spectacle proposé par les artistes de
+          la troupe LCM, dans une ambiance conviviale et musicale. <br />
+          Entrée libre · Petite restauration sur place
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
        ACTUALITÉ 2
        IMAGE À DROITE
   ========================== -->
 
-  <section
-    id="forum-associations"
-    class="actus-detail actus-image-right scroll-reveal"
-  >
+    <section id="forum-associations" class="actus-detail actus-image-right">
+      <div class="actus-detail-text">
+        <p class="actus-detail-date">Samedi 6 septembre 2026</p>
 
-    <div class="actus-detail-text">
+        <h2 class="actus-main-title">Forum des associations</h2>
 
-      <p class="actus-detail-date">
-        Samedi 6 septembre 2026
-      </p>
+        <div class="actus-divider"></div>
 
-      <h2 class="actus-main-title">
-        Forum des associations
-      </h2>
-
-      <div class="actus-divider"></div>
-
-      <p>
-        Retrouvez LCM au Forum des associations de
-        Saint-Maximin-la-Sainte-Baume.
-      </p>
-
-      <p>
-        Ce sera l’occasion de découvrir les activités proposées par
-        l’association, de rencontrer notre équipe et d’obtenir toutes
-        les informations concernant les cours et les inscriptions.
-      </p>
-
-      <div class="actus-coming-soon">
-        Horaires et emplacement à venir
+        <p>
+          <b>Envie de découvrir LCM ?</b>
+        </p>
+        <p>
+          Venez recontrer notre équipe lors du Forum des Associations de
+          Saint-Maximin ! Nous serons ravis d'échanger avec vous, de répondre à
+          vos questions et de vous présenter nos cours, nos projets et l'univers
+          de la comdéie musciale.
+          <br />
+          Adresse et horaires à venir.
+        </p>
       </div>
 
-    </div>
+      <div class="actus-detail-image">
+        <img
+          src="/images/actualites/forum-associations.jpg"
+          alt="Forum des associations de Saint-Maximin-la-Sainte-Baume"
+        />
+      </div>
+    </section>
 
-
-    <div class="actus-detail-image">
-
-      <img
-        src="/images/actualites/forum-associations.jpg"
-        alt="Forum des associations de Saint-Maximin-la-Sainte-Baume"
-      />
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
+    <!-- =========================
        ACTUALITÉ 3
        IMAGE À GAUCHE
   ========================== -->
 
-  <section
-    id="inscriptions-ouvertes"
-    class="actus-detail actus-image-left scroll-reveal"
-  >
+    <section id="inscriptions-ouvertes" class="actus-detail actus-image-left">
+      <div class="actus-detail-image">
+        <img
+          src="/images/actualites/inscriptions-2026.jpg"
+          alt="Inscriptions LCM ouvertes pour la saison 2026"
+        />
+      </div>
 
-    <div class="actus-detail-image">
+      <div class="actus-detail-text">
+        <p class="actus-detail-date">Saison 2026</p>
 
-      <img
-        src="/images/actualites/inscriptions-2026.jpg"
-        alt="Inscriptions LCM ouvertes pour la saison 2026"
-      />
+        <h2 class="actus-main-title">
+          Les inscriptions pour la saison 2026-2027 sont ouvertes !!
+        </h2>
 
-    </div>
+        <div class="actus-divider"></div>
 
+        <p>
+          <b>Et si vous passiez, vous aussi, de l'ombre à la lumière ? ✨</b>
+        </p>
 
-    <div class="actus-detail-text">
+        <p>
+          Vous souhaitez révéler l'artiste qui sommeille en vous ? Les
+          inscriptions pour la saison 2026-2027 sont officiellement ouvertes !!
+          Débutant ou confirmé, LCM vous accompagne dans une aventure artistique
+          ouverte à toutes et tous ! <br />
+          Chant, théâtre et comédie musicale : choisissez votre parcours et progressez
+          à votre rythme dans une ambiance conviviale et bienvaillante. <br />
+          <br />
+          Vous hésitez encore ? Venez participer à notre masterclass, assister au
+          spectacle des élèves de LCM le 22 août ou rencontrer notre équipe au Forum
+          des associations le 6 septembre.
+        </p>
 
-      <p class="actus-detail-date">
-        Saison 2026
-      </p>
-
-      <h2 class="actus-main-title">
-        Les inscriptions sont ouvertes
-      </h2>
-
-      <div class="actus-divider"></div>
-
-      <p>
-        Les inscriptions pour la saison 2026 sont officiellement ouvertes.
-      </p>
-
-      <p>
-        Vous hésitez encore ? Venez participer à notre masterclass,
-        assister au spectacle des élèves de LCM le 22 août ou rencontrer
-        notre équipe au Forum des associations le 6 septembre.
-      </p>
-
-      <a
-        href="/tarifs"
-        class="actus-cta"
-      >
-        Je découvre les tarifs et je m’inscris 🎉
-      </a>
-
-    </div>
-
-  </section>
-
+        <a href="/tarifs" class="actus-cta">
+          Je découvre les tarifs et je m’inscris 🎉
+        </a>
+      </div>
+    </section>
+  </div>
 </Layout>
