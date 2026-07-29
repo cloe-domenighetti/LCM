@@ -713,244 +713,413 @@ const { title = "Association LCM" } = Astro.props;
       }
 
       /* =========================
-   PAGE ÉQUIPE — BLOC EQ.1
+   PAGE ÉQUIPE — BANDEAU
 ========================= */
 
       .eq-hero {
         background: white;
-        padding: 1.5rem 1.2rem 0; /* ↓ moins d’espace en haut */
-      }
-
-      .eq-photo-wrap {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-        border: 1px solid rgba(3, 8, 76, 0.08);
-      }
-
-      .eq-photo {
-        width: 100%;
-        max-height: 480px; /* 🔥 limite la hauteur */
-        object-fit: cover; /* coupe proprement */
-        display: block;
+        padding: 1.5rem 1.2rem 0;
       }
 
       .eq-banner {
-        margin: 0.8rem auto 0;
         max-width: 1100px;
-        background: #731e61; /* 🔥 nouvelle couleur */
-        color: white;
-        border-radius: 14px;
+        margin: 0.8rem auto 0;
         padding: 0.9rem 1.2rem;
+
+        background: #731e61;
+        color: white;
+
+        border-radius: 14px;
         box-shadow: 0 12px 30px rgba(115, 30, 97, 0.35);
+
         text-align: center;
       }
 
       .eq-banner p {
         margin: 0;
+
         font-family: "Parisienne", cursive;
         font-size: 2.2rem;
         letter-spacing: 1px;
       }
 
-      /* Responsive EQ.1 */
-      @media (max-width: 700px) {
-        .eq-hero {
-          padding-top: 2rem;
-        }
-        .eq-banner p {
-          font-size: 1.7rem;
-        }
-      }
-
       /* =========================
-   PAGE ÉQUIPE — BLOC EQ.2
+   PAGE ÉQUIPE — PRÉSIDENT
 ========================= */
 
-      .eq2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4rem;
-        padding: 5rem 2rem;
-        background: #f9f9fb;
-        flex-wrap: wrap;
-      }
+      .eq-president {
+        width: calc(100% - 4rem);
+        max-width: 1100px;
+        margin: 2rem auto 0;
+        padding: 0 0 6rem;
 
-      /* EQ.A2 — Photo */
-      .eq2-left {
-        flex: 0 0 50%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-      }
-
-      .eq2-photo {
-        width: 100%;
-        max-width: 330px; /* avant 420px */
-        border-radius: 20px;
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
-      }
-
-      /* EQ.B2 — Texte */
-      .eq2-right {
-        flex: 0 0 50%;
-        max-width: none;
-      }
-
-      .eq2-name {
-        font-family: "Parisienne", cursive;
-        font-size: 3rem;
-        color: var(--accent);
-        margin: 0;
-      }
-
-      .eq2-role {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        color: #555;
-      }
-
-      .eq2-divider {
-        width: 60px;
-        height: 4px;
-        background: var(--accent);
-        margin: 1.5rem 0;
-      }
-
-      .eq2-text {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #444;
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .eq2 {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .eq2-right {
-          text-align: center;
-        }
-
-        .eq2-divider {
-          margin: 1.5rem auto;
-        }
-      }
-
-      .eq2-quote {
-        margin-top: 2rem;
-        font-style: italic;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #666;
-        padding-left: 1.2rem;
-        border-left: 3px solid var(--accent);
-      }
-
-      /* =========================
-   PAGE ÉQUIPE — BLOC EQ.3
-========================= */
-
-      .eq3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4rem;
-        padding: 5rem 2rem;
         background: white;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto; /* 🔥 centre le bloc */
       }
 
-      /* Texte à gauche */
-      .eq3-left {
-        flex: 1;
-        min-width: 300px;
-        max-width: 520px;
-        padding-left: 1rem; /* petit décalage élégant */
-      }
+      /* Encadré "Le mot du président" */
 
-      .eq3-name {
-        font-family: "Parisienne", cursive;
-        font-size: 3rem;
-        color: var(--accent);
-        margin: 0;
-      }
-
-      .eq3-role {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        color: #555;
-      }
-
-      .eq3-divider {
-        width: 60px;
-        height: 4px;
-        background: var(--accent);
-        margin: 1.5rem 0;
-      }
-
-      .eq3-text {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #444;
-      }
-
-      .eq3-quote {
-        margin-top: 2rem;
-        font-style: italic;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #666;
-        padding-left: 1.2rem;
-        border-left: 3px solid var(--accent);
-      }
-
-      /* Photo à droite */
-      .eq3-right {
-        flex: 1;
-        min-width: 300px;
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      .eq3-photo {
+      .eq-president-label {
         width: 100%;
-        max-width: 420px;
+        margin-bottom: 3rem;
+        padding: 1rem 1.5rem;
+
+        background: linear-gradient(
+          135deg,
+          rgba(3, 8, 76, 0.98),
+          rgba(115, 30, 97, 0.95)
+        );
+
+        color: white;
+
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(3, 8, 76, 0.2);
+
+        font-family: Arial, sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      /* Partie photo + identité */
+
+      .eq-president-header {
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        align-items: center;
+        gap: 3rem;
+
+        max-width: 900px;
+        margin: 0 auto 3rem;
+      }
+
+      .eq-president-photo-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .eq-president-photo {
+        display: block;
+
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+
         border-radius: 20px;
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
       }
 
+      .eq-president-identity {
+        text-align: left;
+      }
+
+      .eq-president-name {
+        margin: 0;
+
+        font-family: "Parisienne", cursive;
+        font-size: 3.4rem;
+        line-height: 1.1;
+        color: var(--accent);
+      }
+
+      .eq-president-role {
+        margin-top: 0.7rem;
+
+        color: #555;
+
+        font-size: 0.95rem;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .eq-president-divider {
+        width: 70px;
+        height: 4px;
+        margin-top: 1.5rem;
+
+        background: #731e61;
+        border-radius: 999px;
+      }
+
+      /* Texte du président */
+
+      .eq-president-text {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        color: #444;
+
+        font-size: 1.08rem;
+        line-height: 1.65;
+
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /*
+ * Les paragraphes remplacent les <br>.
+ * Cette marge contrôle précisément l'espace entre les blocs.
+ */
+      .eq-president-text p {
+        margin: 0 0 0.75rem;
+      }
+
+      .eq-president-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      .eq-president-highlight {
+        margin: 1.2rem 0 !important;
+        padding: 1rem 1.4rem;
+
+        background: rgba(115, 30, 97, 0.07);
+
+        border-left: 4px solid #731e61;
+        border-radius: 8px;
+
+        color: #333;
+        font-style: italic;
+      }
+
+      /* Présentation de Jo */
+
+      .eq-president-quote {
+        margin: 2rem 0 0;
+        padding-left: 1.2rem;
+
+        color: #666;
+
+        border-left: 3px solid var(--accent);
+
+        font-size: 1.05rem;
+        font-style: italic;
+        line-height: 1.7;
+
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
       /* Responsive */
-      @media (max-width: 900px) {
-        .eq3 {
-          flex-direction: column;
+
+      @media (max-width: 800px) {
+        .eq-president {
+          width: 100%;
+          padding: 0 1.5rem 5rem;
+        }
+
+        .eq-president-label {
+          margin-bottom: 2.5rem;
+
+          font-size: 1.05rem;
+          letter-spacing: 2px;
+        }
+
+        .eq-president-header {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+
+          margin-bottom: 2.5rem;
+        }
+
+        .eq-president-photo {
+          max-width: 250px;
+        }
+
+        .eq-president-identity {
           text-align: center;
         }
 
-        .eq3-divider {
+        .eq-president-name {
+          font-size: 2.8rem;
+        }
+
+        .eq-president-divider {
+          margin: 1.5rem auto 0;
+        }
+
+        /*
+   * La justification donne parfois de grands espaces sur les petits écrans.
+   */
+        .eq-president-text,
+        .eq-president-quote {
+          text-align: left;
+        }
+      }
+
+      /* =========================
+   PAGE ÉQUIPE — CHRIS ET CLOÉ
+========================= */
+
+      .eq-member {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        align-items: center;
+        gap: 3.5rem;
+
+        width: calc(100% - 4rem);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 5rem 0;
+
+        background: #f9f9fb;
+      }
+
+      /*
+ * Espace supplémentaire entre Chris et Cloé.
+ */
+      .eq-member + .eq-member {
+        margin-top: 4rem;
+        padding-top: 7rem;
+
+        border-top: 1px solid rgba(3, 8, 76, 0.12);
+      }
+
+      .eq-member-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .eq-member-photo {
+        display: block;
+
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+
+        border-radius: 20px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+      }
+
+      .eq-member-right {
+        width: 100%;
+        max-width: 750px;
+      }
+
+      .eq-member-name {
+        margin: 0;
+
+        font-family: "Parisienne", cursive;
+        font-size: 3rem;
+        line-height: 1.1;
+        color: var(--accent);
+      }
+
+      .eq-member-role {
+        margin-top: 0.5rem;
+
+        color: #555;
+
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .eq-member-divider {
+        width: 60px;
+        height: 4px;
+        margin: 1.5rem 0;
+
+        background: var(--accent);
+      }
+
+      .eq-member-text {
+        margin: 0;
+
+        color: #444;
+
+        font-size: 1.1rem;
+        line-height: 1.7;
+
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      .eq-member-quote {
+        margin: 2rem 0 0;
+        padding-left: 1.2rem;
+
+        color: #666;
+
+        border-left: 3px solid var(--accent);
+
+        font-size: 1.05rem;
+        font-style: italic;
+        line-height: 1.7;
+
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /* =========================
+   PAGE ÉQUIPE — RESPONSIVE
+========================= */
+
+      @media (max-width: 900px) {
+        .eq-member {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+
+          width: 100%;
+          padding: 4rem 1.5rem;
+
+          text-align: center;
+        }
+
+        .eq-member + .eq-member {
+          margin-top: 2rem;
+          padding-top: 5rem;
+        }
+
+        .eq-member-right {
+          max-width: 750px;
+          margin: 0 auto;
+        }
+
+        .eq-member-divider {
           margin: 1.5rem auto;
         }
 
-        .eq3-quote {
-          border-left: none;
-          padding-left: 0;
+        .eq-member-text,
+        .eq-member-quote {
+          text-align: left;
         }
 
-        .eq3-right {
-          justify-content: center; /* recentre sur mobile */
-          padding-right: 0;
+        .eq-president {
+          padding: 3rem 1.5rem 5rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .eq-banner p {
+          font-size: 1.8rem;
+        }
+
+        .eq-president-name,
+        .eq-member-name {
+          font-size: 2.6rem;
+        }
+
+        .eq-president-photo {
+          max-width: 240px;
+        }
+
+        .eq-member-photo {
+          max-width: 280px;
+        }
+
+        .eq-president-text,
+        .eq-member-text {
+          font-size: 1rem;
+        }
+
+        .eq-president-quote {
+          padding: 1.2rem 1.3rem;
         }
       }
 
@@ -980,118 +1149,389 @@ const { title = "Association LCM" } = Astro.props;
       }
 
       /* =========================
-   PAGE PLANNING — GRILLE
+   PAGE PLANNING — INTRODUCTION
 ========================= */
-      .planning-grid {
+
+      .planning-intro {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem 2rem 5rem;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.8rem;
+        padding: 0 2rem 2rem;
+      }
+
+      .planning-season {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        padding: 1.25rem 1.5rem;
+
+        background: white;
+        border: 1px solid rgba(3, 8, 76, 0.08);
+        border-radius: 16px;
+
+        box-shadow: 0 10px 28px rgba(3, 8, 76, 0.07);
+      }
+
+      .planning-season-label {
+        flex-shrink: 0;
+
+        padding: 0.55rem 1rem;
+
+        background: rgba(115, 30, 97, 0.11);
+        color: #731e61;
+
+        border-radius: 999px;
+
+        font-size: 0.9rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .planning-season p {
+        margin: 0;
+
+        color: #555;
+
+        font-size: 1rem;
+        line-height: 1.6;
       }
 
       /* =========================
-   CARTES HORIZONTALES
+   PAGE PLANNING — CARTES PAR JOUR
 ========================= */
-      .planning-card {
-        background: white;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+      .schedule-grid {
         display: grid;
-        grid-template-columns: 160px 1fr;
-        min-height: 170px;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem 5rem;
+      }
+
+      .schedule-day {
+        overflow: hidden;
+
+        background: white;
+
         border: 1px solid rgba(3, 8, 76, 0.08);
+        border-radius: 20px;
+
+        box-shadow: 0 14px 36px rgba(3, 8, 76, 0.09);
+
         transition:
           transform 0.25s ease,
           box-shadow 0.25s ease;
       }
 
-      .planning-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+      .schedule-day:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 45px rgba(3, 8, 76, 0.13);
       }
 
-      .pc-photo {
-        width: 100%;
-        height: 100%;
-        background: #f3f3f6;
+      /* En-tête coloré de chaque jour */
+
+      .schedule-day-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        padding: 1.5rem 1.8rem;
+
+        background: linear-gradient(
+          135deg,
+          rgba(3, 8, 76, 0.98),
+          rgba(115, 30, 97, 0.95)
+        );
+
+        color: white;
       }
 
-      .pc-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* compact + joli */
-        display: block;
-      }
+      .schedule-day-label {
+        margin: 0 0 0.35rem;
 
-      /* contenu */
-      .pc-content {
-        padding: 1.2rem 1.2rem 1.1rem;
-      }
+        color: rgba(255, 255, 255, 0.75);
 
-      /* .pc-title {
-  font-family: "Parisienne", cursive;
-  font-size: 2.2rem;
-  margin: 0;
-  color: var(--accent);
-  line-height: 1.05;
-} */
-
-      .pc-title {
-        text-transform: uppercase;
+        font-size: 0.78rem;
+        font-weight: bold;
         letter-spacing: 2px;
-        font-size: 1.3rem;
-        color: #731e61;
+        text-transform: uppercase;
+      }
+
+      .schedule-day-header h2 {
         margin: 0;
-        padding-top: 0.5rem;
-        padding-bottom: 0.8rem;
-        padding-left: 0px;
+
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+        line-height: 1.1;
       }
 
-      .pc-meta {
-        margin-top: 0.5rem;
-        font-size: 0.95rem;
-        color: #555;
-      }
+      .schedule-day-count {
+        flex-shrink: 0;
 
-      .pc-meta span {
-        color: #222;
+        padding: 0.5rem 0.9rem;
+
+        background: rgba(255, 255, 255, 0.14);
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 999px;
+
+        font-size: 0.85rem;
         font-weight: bold;
       }
 
-      .pc-times {
-        margin: 0.9rem 0 0;
-        padding-left: 1.1rem;
-        color: #444;
-        line-height: 1.55;
-        font-size: 0.98rem;
+      /* En-tête du tableau */
+
+      .schedule-table-header,
+      .schedule-row {
+        display: grid;
+        grid-template-columns:
+          minmax(135px, 0.9fr)
+          minmax(190px, 1.6fr)
+          minmax(115px, 0.8fr)
+          minmax(110px, 0.7fr);
+
+        align-items: center;
+        column-gap: 1.5rem;
       }
 
-      .pc-times li {
-        margin-bottom: 0.35rem;
+      .schedule-table-header {
+        padding: 0.9rem 1.8rem;
+
+        background: rgba(3, 8, 76, 0.05);
+        color: #555;
+
+        border-bottom: 1px solid rgba(3, 8, 76, 0.08);
+
+        font-size: 0.78rem;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      /* Lignes du planning */
+
+      .schedule-row {
+        min-height: 78px;
+        padding: 1rem 1.8rem;
+
+        border-bottom: 1px solid rgba(3, 8, 76, 0.08);
+      }
+
+      .schedule-row:last-child {
+        border-bottom: none;
+      }
+
+      .schedule-row:hover {
+        background: rgba(115, 30, 97, 0.035);
+      }
+
+      .schedule-time {
+        color: var(--accent);
+
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .schedule-course {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        color: #333;
+      }
+
+      .schedule-course strong {
+        font-size: 1.02rem;
+      }
+
+      .schedule-course span {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .schedule-capacity {
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      /* Pastille de l’intervenant */
+
+      .schedule-teacher {
+        justify-self: start;
+
+        min-width: 72px;
+        padding: 0.45rem 0.85rem;
+
+        border-radius: 999px;
+
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .teacher-cloe {
+        background: rgba(115, 30, 97, 0.12);
+        color: #731e61;
+      }
+
+      .teacher-chris {
+        background: rgba(3, 8, 76, 0.1);
+        color: #03084c;
       }
 
       /* =========================
-   Responsive
+   PAGE PLANNING — INFORMATIONS
 ========================= */
-      @media (max-width: 900px) {
-        .planning-grid {
-          grid-template-columns: 1fr;
+
+      .planning-notes {
+        padding: 0 2rem 5rem;
+      }
+
+      .planning-note-card {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2.2rem;
+
+        background: white;
+
+        border: 1px solid rgba(3, 8, 76, 0.08);
+        border-left: 5px solid #731e61;
+        border-radius: 16px;
+
+        box-shadow: 0 12px 30px rgba(3, 8, 76, 0.08);
+
+        text-align: center;
+      }
+
+      .planning-note-card h2 {
+        margin: 0 0 1rem;
+
+        color: var(--accent);
+
+        font-size: 1.8rem;
+      }
+
+      .planning-note-card p {
+        max-width: 700px;
+        margin: 0 auto;
+
+        color: #555;
+
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .planning-cta {
+        display: inline-block;
+
+        margin-top: 1.6rem;
+        padding: 0.85rem 1.5rem;
+
+        background: #731e61;
+        color: white;
+
+        border-radius: 999px;
+
+        font-weight: bold;
+        text-decoration: none;
+
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .planning-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(115, 30, 97, 0.28);
+      }
+
+      /* =========================
+   PAGE PLANNING — RESPONSIVE
+========================= */
+
+      @media (max-width: 800px) {
+        .planning-season {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
         }
-        .planning-title {
-          font-size: 3.2rem;
+
+        .schedule-grid {
+          padding: 1rem 1.5rem 4rem;
+        }
+
+        .schedule-table-header {
+          display: none;
+        }
+
+        .schedule-row {
+          grid-template-columns: 1fr auto;
+          grid-template-areas:
+            "time teacher"
+            "course course"
+            "capacity capacity";
+
+          gap: 0.6rem 1rem;
+
+          padding: 1.3rem 1.4rem;
+        }
+
+        .schedule-time {
+          grid-area: time;
+        }
+
+        .schedule-course {
+          grid-area: course;
+        }
+
+        .schedule-capacity {
+          grid-area: capacity;
+        }
+
+        .schedule-teacher {
+          grid-area: teacher;
+          justify-self: end;
         }
       }
 
       @media (max-width: 520px) {
-        .planning-card {
-          grid-template-columns: 120px 1fr;
-          min-height: 150px;
+        .planning-hero {
+          padding: 2.5rem 1.5rem 1rem;
         }
-        .pc-title {
-          font-size: 1.9rem;
+
+        .planning-title {
+          font-size: 3.1rem;
+        }
+
+        .planning-intro {
+          padding: 0 1.5rem 1.5rem;
+        }
+
+        .schedule-day-header {
+          align-items: flex-start;
+          gap: 1rem;
+
+          padding: 1.3rem 1.4rem;
+        }
+
+        .schedule-day-header h2 {
+          font-size: 1.7rem;
+        }
+
+        .schedule-day-count {
+          font-size: 0.75rem;
+        }
+
+        .planning-notes {
+          padding: 0 1.5rem 4rem;
+        }
+
+        .planning-note-card {
+          padding: 1.7rem 1.4rem;
         }
       }
 
@@ -1537,6 +1977,9 @@ const { title = "Association LCM" } = Astro.props;
 
         font-size: 1.08rem;
         line-height: 1.75;
+
+        text-align: justify;
+        text-justify: inter-word;
       }
 
       /* Informations pratiques */
@@ -1552,6 +1995,9 @@ const { title = "Association LCM" } = Astro.props;
         border-radius: 12px;
 
         line-height: 1.7;
+
+        text-align: justify;
+        text-justify: inter-word;
       }
 
       .actus-practical-info li {
@@ -1688,6 +2134,11 @@ const { title = "Association LCM" } = Astro.props;
 
         .actus-navigation {
           padding: 0 1.5rem 2rem;
+        }
+
+        .actus-detail-text p,
+        .actus-practical-info {
+          text-align: left;
         }
       }
 
@@ -1906,6 +2357,9 @@ const { title = "Association LCM" } = Astro.props;
       const actualitesPage =
         document.querySelector<HTMLElement>(".actualites-page");
 
+      const planningPage =
+        document.querySelector<HTMLElement>(".planning-page");
+
       /*
        * Sur la page Actualités, tout le contenu apparaît en même temps,
        * dès l'ouverture de la page.
@@ -1913,6 +2367,12 @@ const { title = "Association LCM" } = Astro.props;
       if (actualitesPage) {
         requestAnimationFrame(() => {
           actualitesPage.classList.add("visible");
+        });
+      }
+
+      if (planningPage) {
+        requestAnimationFrame(() => {
+          planningPage.classList.add("visible");
         });
       }
 
@@ -1936,8 +2396,7 @@ const { title = "Association LCM" } = Astro.props;
          * La page Actualités est déjà animée globalement.
          * Elle ne doit pas être surveillée à nouveau.
          */
-        if (element === actualitesPage) return;
-
+        if (element === actualitesPage || element === planningPage) return;
         observer.observe(element);
       });
     </script>

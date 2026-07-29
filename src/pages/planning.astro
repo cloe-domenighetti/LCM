@@ -3,117 +3,283 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Cours & planning - LCM">
-  <!-- HEADER PAGE -->
-  <section class="planning-hero scroll-reveal">
-    <h1 class="planning-title">Cours & planning</h1>
-    <p class="planning-subtitle">
-      Découvrez nos disciplines et retrouvez les horaires par âge et par style.
-    </p>
-  </section>
+  <div class="planning-page scroll-reveal">
+    <!-- =========================
+       EN-TÊTE DE LA PAGE
+  ========================== -->
 
-  <!-- GRILLE DES CARTES -->
-  <section class="planning-grid scroll-reveal">
-    <!-- 1) Comédie musicale -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img
-          src="/images/comediemusicale.jpg"
-          alt="Cours de comédie musicale"
-        />
-      </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Comédie musicale</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+    <section class="planning-hero">
+      <h1 class="planning-title">Cours & planning</h1>
 
-        <ul class="pc-times">
-          <li><strong>Groupe ados</strong> — Lundi 18h30 – 20h30</li>
-          <li><strong>Groupe adultes</strong> — Jeudi 19h00 – 21h00</li>
-        </ul>
-      </div>
-    </article>
+      <p class="planning-subtitle">
+        Découvrez les créneaux proposés par LCM Spectacle pour la saison
+        2026-2027.
+      </p>
+    </section>
 
-    <!-- 2) Chant -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img src="/images/chant.jpeg" alt="Cours de chant" />
-      </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Chant</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+    <!-- =========================
+       INFORMATION SAISON
+  ========================== -->
 
-        <ul class="pc-times">
-          <li><strong>Enfants</strong> — Mercredi 14h00 – 15h00</li>
-          <li><strong>Ados</strong> — Mercredi 15h15 – 16h15</li>
-          <li><strong>Adultes</strong> — Mercredi 18h30 – 19h30</li>
-        </ul>
-      </div>
-    </article>
+    <section class="planning-intro">
+      <div class="planning-season">
+        <span class="planning-season-label">Saison 2026-2027</span>
 
-    <!-- 3) Danse -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img src="/images/danse.jpeg" alt="Cours de danse" />
+        <p>
+          Les cours sont organisés par tranche d’âge et par niveau, dans la
+          limite des places disponibles. <br />
+          <b
+            >Les créneaux indiqués sont susceptibles d'être adaptés en fonction
+            du nombre d'inscrits.</b
+          >
+        </p>
       </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Danse</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+    </section>
 
-        <ul class="pc-times">
-          <li><strong>Classique adultes</strong> — Lundi 20h00 – 21h00</li>
-          <li><strong>Jazz adultes</strong> — Mardi 19h00 – 20h00</li>
-          <li><strong>Classique ados</strong> — Mardi 18h00 – 19h00</li>
-        </ul>
-      </div>
-    </article>
+    <!-- =========================
+       PLANNING PAR JOUR
+  ========================== -->
 
-    <!-- 4) Théâtre -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img src="/images/theatre.jpg" alt="Cours de théâtre" />
-      </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Théâtre</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+    <section class="schedule-grid">
+      <!-- MERCREDI -->
 
-        <ul class="pc-times">
-          <li><strong>Enfants</strong> — Samedi 10h00 – 11h00</li>
-          <li><strong>Ados</strong> — Samedi 11h15 – 12h30</li>
-          <li><strong>Adultes</strong> — Jeudi 18h30 – 20h00</li>
-        </ul>
-      </div>
-    </article>
+      <article class="schedule-day">
+        <header class="schedule-day-header">
+          <div>
+            <p class="schedule-day-label">Planning hebdomadaire</p>
+            <h2>Mercredi</h2>
+          </div>
 
-    <!-- 5) Cours particuliers -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img src="/images/particulier.jpeg" alt="Cours particuliers" />
-      </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Cours particuliers</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+          <span class="schedule-day-count">7 créneaux</span>
+        </header>
 
-        <ul class="pc-times">
-          <li><strong>Chant</strong> — Sur rendez-vous</li>
-          <li><strong>Théâtre</strong> — Sur rendez-vous</li>
-          <li><strong>Prépa auditions</strong> — Sur rendez-vous</li>
-        </ul>
-      </div>
-    </article>
+        <div class="schedule-table-header">
+          <span>Horaire</span>
+          <span>Cours</span>
+          <span>Places</span>
+          <span>Intervenant</span>
+        </div>
 
-    <!-- 6) Éveil artistique -->
-    <article class="planning-card">
-      <div class="pc-photo">
-        <img src="/images/eveil.jpeg" alt="Éveil artistique" />
-      </div>
-      <div class="pc-content">
-        <h2 class="pc-title">Éveil artistique</h2>
-        <div class="pc-meta"><span>Enseignant :</span> Machin Truc</div>
+        <div class="schedule-row">
+          <div class="schedule-time">10h00 – 12h00</div>
 
-        <ul class="pc-times">
-          <li><strong>6–8 ans</strong> — Mercredi 10h30 – 11h30</li>
-          <li><strong>8–10 ans</strong> — Mercredi 11h45 – 12h45</li>
-        </ul>
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+            <span>6 à 12 ans</span>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">13h30 – 14h30</div>
+
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+            <span>6 à 12 ans</span>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">14h30 – 15h30</div>
+
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+            <span>6 à 12 ans</span>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">15h30 – 16h30</div>
+
+          <div class="schedule-course">
+            <strong>Adolescents</strong>
+            <span>12 à 17 ans</span>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">17h00 – 18h00</div>
+
+          <div class="schedule-course">
+            <strong>Ados / Adultes</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">18h00 – 19h00</div>
+
+          <div class="schedule-course">
+            <strong>Théâtre</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">19h15 – 20h30</div>
+
+          <div class="schedule-course">
+            <strong>Adultes</strong>
+          </div>
+
+          <div class="schedule-capacity">12 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+      </article>
+
+      <!-- JEUDI -->
+
+      <article class="schedule-day">
+        <header class="schedule-day-header">
+          <div>
+            <p class="schedule-day-label">Planning hebdomadaire</p>
+            <h2>Jeudi</h2>
+          </div>
+
+          <span class="schedule-day-count">4 créneaux</span>
+        </header>
+
+        <div class="schedule-table-header">
+          <span>Horaire</span>
+          <span>Cours</span>
+          <span>Places</span>
+          <span>Intervenant</span>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">17h00 – 18h00</div>
+
+          <div class="schedule-course">
+            <strong>Adolescents</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">18h00 – 19h00</div>
+
+          <div class="schedule-course">
+            <strong>Adultes</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">19h15 – 20h30</div>
+
+          <div class="schedule-course">
+            <strong>Adultes</strong>
+          </div>
+
+          <div class="schedule-capacity">15 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">20h30 – 21h30</div>
+
+          <div class="schedule-course">
+            <strong>Théâtre</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+      </article>
+
+      <!-- VENDREDI -->
+
+      <article class="schedule-day">
+        <header class="schedule-day-header">
+          <div>
+            <p class="schedule-day-label">Planning hebdomadaire</p>
+            <h2>Vendredi</h2>
+          </div>
+
+          <span class="schedule-day-count">Cours individuels</span>
+        </header>
+
+        <div class="schedule-table-header">
+          <span>Horaire</span>
+          <span>Cours</span>
+          <span>Format</span>
+          <span>Intervenant</span>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">17h00 – 20h00</div>
+
+          <div class="schedule-course">
+            <strong>Cours individuel</strong>
+          </div>
+
+          <div class="schedule-capacity">Tranches de 30 min</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">20h00 – 23h00</div>
+
+          <div class="schedule-course">
+            <strong>Répétitions</strong>
+          </div>
+
+          <div class="schedule-capacity">Accès libre</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- =========================
+       INFORMATIONS COMPLÉMENTAIRES
+  ========================== -->
+
+    <section class="planning-notes">
+      <div class="planning-note-card">
+        <h2>Informations pratiques</h2>
+
+        <p>
+          Les groupes sont constitués dans la limite des places disponibles. Les
+          cours individuels du vendredi sont proposés sur réservation, par
+          créneaux de 30 minutes.
+        </p>
+
+        <a href="/tarifs" class="planning-cta">
+          Consulter les tarifs et s’inscrire
+        </a>
       </div>
-    </article>
-  </section>
+    </section>
+  </div>
 </Layout>
