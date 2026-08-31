@@ -9,13 +9,27 @@ import Layout from "../layouts/Layout.astro";
     ========================== -->
 
     <section class="planning-hero">
-      <h1 class="planning-title">Cours & planning</h1>
+      <h1 class="planning-title">Cours & Planning</h1>
 
       <p class="planning-subtitle">
         Découvrez les créneaux proposés par LCM Spectacle pour la saison
         2026-2027.
       </p>
     </section>
+
+    <!-- =========================
+     ACCÈS RAPIDE
+========================== -->
+
+    <!-- =========================
+     ACCÈS RAPIDE
+========================== -->
+
+    <nav class="planning-navigation" aria-label="Accès rapide">
+      <a href="#infos-pratiques" class="planning-navigation-button">
+        📍 Informations pratiques · Où trouver nos salles ?
+      </a>
+    </nav>
 
     <!-- =========================
          INFORMATION SAISON
@@ -295,19 +309,100 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- =========================
-         INFORMATIONS COMPLÉMENTAIRES
-    ========================== -->
+     INFORMATIONS PRATIQUES
+========================== -->
 
-    <section class="planning-notes">
-      <div class="planning-note-card">
-        <h2>Informations pratiques</h2>
+    <section id="infos-pratiques" class="planning-locations">
+      <div class="planning-locations-heading">
+        <span class="planning-locations-eyebrow">Informations pratiques</span>
+
+        <h2>Où trouver nos salles ?</h2>
 
         <p>
-          Les groupes sont constitués dans la limite des places disponibles. Les
-          cours individuels du vendredi sont proposés sur réservation, par
-          créneaux de 30 minutes.
+          Les cours de LCM sont répartis dans <strong
+            >trois salles différentes</strong
+          >
+          à Saint-Maximin-la-Sainte-Baume selon le jour et l’horaire : la <strong
+            >Salle Micheline</strong
+          >, la <strong>Salle Orient Express</strong>
+          et la <strong>Maison du Bridge</strong>.
         </p>
+      </div>
 
+      <div class="planning-locations-grid">
+        <!-- ESPACE GARE -->
+        <article class="planning-location-card">
+          <div class="planning-location-content">
+            <span class="planning-location-badge">Mercredi & vendredi</span>
+
+            <h3>Espace Gare</h3>
+
+            <p>
+              La <strong>Salle Micheline</strong> et la
+              <strong>Salle Orient Express</strong> se trouvent toutes les deux à
+              l’Espace Gare, derrière l’Intermarché de Saint-Maximin-la-Sainte-Baume.
+            </p>
+
+            <p class="planning-location-detail">
+              <strong>Salle Micheline :</strong> cours du mercredi<br />
+              <strong>Salle Orient Express :</strong> cours individuels du vendredi
+            </p>
+
+            <p class="planning-location-warning">
+              📍 Les coordonnées précises de l’Espace Gare seront ajoutées
+              prochainement. La carte indique pour le moment l’Intermarché situé
+              juste devant.
+            </p>
+          </div>
+
+          <div class="planning-map">
+            <iframe
+              src="https://www.google.com/maps?q=Intermarch%C3%A9%20Saint-Maximin-la-Sainte-Baume&output=embed"
+              title="Espace Gare à Saint-Maximin-la-Sainte-Baume"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </article>
+
+        <!-- MAISON DU BRIDGE -->
+        <article class="planning-location-card">
+          <div class="planning-location-content">
+            <span class="planning-location-badge">Mardi & jeudi</span>
+
+            <h3>Maison du Bridge</h3>
+
+            <p>
+              Les cours du mardi et du jeudi ont lieu à la
+              <strong>Maison du Bridge</strong>.
+            </p>
+
+            <p class="planning-location-detail">
+              <strong>Adresse :</strong><br />
+              491 avenue des Cinq Ponts<br />
+              83470 Saint-Maximin-la-Sainte-Baume
+            </p>
+
+            <a
+              href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12c9719007708887:0x21ad29a309686ae5?sa=X&ved=1t:8290&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="planning-map-link"
+            >
+              Ouvrir dans Google Maps ↗
+            </a>
+          </div>
+
+          <div class="planning-map">
+            <iframe
+              src="https://www.google.com/maps?q=491%20Avenue%20des%20Cinq%20Ponts%2083470%20Saint-Maximin-la-Sainte-Baume&output=embed"
+              title="Maison du Bridge à Saint-Maximin-la-Sainte-Baume"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </article>
+      </div>
+
+      <div class="planning-locations-action">
         <a href="/tarifs" class="planning-cta">
           Consulter les tarifs et s’inscrire
         </a>

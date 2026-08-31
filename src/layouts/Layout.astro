@@ -683,6 +683,7 @@ const { title = "Association LCM" } = Astro.props;
       .contact-email .mail-icon {
         font-size: 1.2rem;
       }
+
       .mail-link {
         color: white;
         text-decoration: underline;
@@ -1173,6 +1174,47 @@ const { title = "Association LCM" } = Astro.props;
    PAGE PLANNING — INTRODUCTION
 ========================= */
 
+      /* =========================
+   PAGE PLANNING — NAVIGATION
+========================= */
+
+      .planning-navigation {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 1.5rem;
+
+        display: flex;
+      }
+
+      .planning-navigation-button {
+        display: inline-block;
+
+        padding: 0.75rem 1.3rem;
+
+        background: rgba(115, 30, 97, 0.1);
+        color: #731e61;
+
+        border: 1px solid rgba(115, 30, 97, 0.3);
+        border-radius: 999px;
+
+        font-weight: bold;
+        text-decoration: none;
+
+        transition:
+          background 0.25s ease,
+          color 0.25s ease,
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .planning-navigation-button:hover {
+        background: #731e61;
+        color: white;
+
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(115, 30, 97, 0.2);
+      }
+
       .planning-intro {
         max-width: 1200px;
         margin: 0 auto;
@@ -1479,6 +1521,158 @@ const { title = "Association LCM" } = Astro.props;
       }
 
       /* =========================
+   PAGE PLANNING — LIEUX
+========================= */
+
+      #infos-pratiques {
+        scroll-margin-top: 145px;
+      }
+
+      .planning-locations {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 5rem;
+      }
+
+      .planning-locations-heading {
+        max-width: 850px;
+        margin-bottom: 2rem;
+      }
+
+      .planning-locations-eyebrow {
+        display: inline-block;
+
+        margin-bottom: 0.6rem;
+
+        color: #731e61;
+
+        font-size: 0.82rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .planning-locations-heading h2 {
+        margin: 0;
+
+        color: var(--accent);
+
+        font-size: 2.3rem;
+      }
+
+      .planning-locations-heading p {
+        margin: 0.8rem 0 0;
+
+        color: #555;
+
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      /* 2 cartes côte à côte */
+
+      .planning-locations-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+      }
+
+      .planning-location-card {
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+
+        background: white;
+
+        border: 1px solid rgba(3, 8, 76, 0.08);
+        border-radius: 20px;
+
+        box-shadow: 0 14px 36px rgba(3, 8, 76, 0.09);
+      }
+
+      .planning-location-content {
+        flex: 1;
+        padding: 1.8rem;
+      }
+
+      .planning-location-badge {
+        display: inline-block;
+
+        margin-bottom: 1rem;
+        padding: 0.45rem 0.8rem;
+
+        background: rgba(115, 30, 97, 0.1);
+        color: #731e61;
+
+        border-radius: 999px;
+
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+
+      .planning-location-content h3 {
+        margin: 0 0 1rem;
+
+        color: var(--accent);
+
+        font-size: 1.5rem;
+      }
+
+      .planning-location-content p {
+        color: #555;
+        line-height: 1.65;
+      }
+
+      .planning-location-detail {
+        padding: 1rem 1.2rem;
+
+        background: rgba(3, 8, 76, 0.045);
+
+        border-radius: 10px;
+      }
+
+      .planning-location-warning {
+        color: #666 !important;
+
+        font-size: 0.9rem !important;
+        font-style: italic;
+      }
+
+      .planning-map-link {
+        color: #731e61;
+
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .planning-map-link:hover {
+        text-decoration: underline;
+      }
+
+      .planning-map {
+        width: 100%;
+        height: 330px;
+
+        border-top: 1px solid rgba(3, 8, 76, 0.08);
+      }
+
+      .planning-map iframe {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+      }
+
+      .planning-locations-action {
+        margin-top: 2.5rem;
+
+        text-align: center;
+      }
+
+      /* =========================
    PAGE PLANNING — RESPONSIVE
 ========================= */
 
@@ -1539,6 +1733,22 @@ const { title = "Association LCM" } = Astro.props;
         .schedule-teacher {
           grid-area: teacher;
           justify-self: end;
+        }
+
+        .planning-navigation {
+          padding: 0 1.5rem 1.5rem;
+        }
+
+        .planning-locations {
+          padding: 0 1.5rem 4rem;
+        }
+
+        .planning-locations-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .planning-map {
+          height: 300px;
         }
       }
 
