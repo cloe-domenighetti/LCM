@@ -217,69 +217,63 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- BLOC 4 : CONTACT -->
   <section id="contact" class="bloc4 scroll-reveal">
-    <div class="bloc4-left">
-      <div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5792.685421026857!2d5.852465215093448!3d43.45344188417966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9702815b63b0f%3A0x512551ec03230eec!2sMairie%20de%20Saint-Maximin-la-Sainte-Baume%2083470!5e0!3m2!1sfr!2sfr!4v1771200622867!5m2!1sfr!2sfr"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Mairie de Saint-Maximin-la-Sainte-Baume"></iframe>
-      </div>
-    </div>
-
-    <div class="bloc4-right">
+    <div class="contact-container">
       <div class="contact-label">Contact & Infos</div>
 
-      <div class="contact-item">
-        <span class="icon">📍</span>
+      <div class="contact-grid">
+        <!-- SIÈGE SOCIAL + EMAIL -->
+        <div class="contact-general">
+          <div class="contact-item">
+            <span class="icon">📍</span>
 
-        <span>
-          Adresse à venir<br />
-          XXX adresse à venir<br />
-          83470 Saint-Maximin-la-Sainte-Baume
-        </span>
-      </div>
+            <div>
+              <strong>Siège social</strong>
 
-      <div class="contact-item">
-        <span class="icon">📞</span>
-        <span>06 52 92 29 35</span>
-      </div>
+              <span>
+                514 chemin de la Colline<br />
+                83470 Saint-Maximin-la-Sainte-Baume
+              </span>
+            </div>
+          </div>
 
-      <div class="contact-item">
-        <span class="icon">📧</span>
+          <div class="contact-item contact-email">
+            <span class="icon mail-icon">📧</span>
 
-        <span>
-          <a href="mailto:lcm.spectacle@gmail.com" class="mail-link">
-            lcm.spectacle@gmail.com
-          </a>
-        </span>
+            <div>
+              <a href="mailto:lcm.spectacle@gmail.com" class="mail-link">
+                lcm.spectacle@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHRIS -->
+        <div class="contact-item">
+          <span class="icon">📞</span>
+
+          <div>
+            <strong>Chris Mam</strong>
+            <span>Coach vocal</span>
+
+            <a href="tel:+33652922935" class="mail-link"> 06 52 92 29 35 </a>
+          </div>
+        </div>
+
+        <!-- JOAN -->
+        <div class="contact-item">
+          <span class="icon">📞</span>
+
+          <div>
+            <strong>Joan</strong>
+            <span>Direction technique & organisation générale</span>
+
+            <a href="tel:+33765404040" class="mail-link"> 07 65 40 40 40 </a>
+          </div>
+        </div>
       </div>
 
       <div class="social-icons">
-        <a href="#" target="_blank" aria-label="Instagram" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="white">
-            <path
-              d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm6-1a1 1 0 110 2 1 1 0 010-2z"
-            ></path>
-          </svg>
-        </a>
-
-        <a href="#" target="_blank" aria-label="Facebook" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="white">
-            <path
-              d="M22 12A10 10 0 1010 21.8V14.9H7.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v6.9A10 10 0 0022 12z"
-            ></path>
-          </svg>
-        </a>
-
-        <a href="#" target="_blank" aria-label="TikTok" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="white">
-            <path
-              d="M16 3a6 6 0 004 4v3a9 9 0 01-4-1.2V14a5 5 0 11-5-5c.3 0 .7 0 1 .1v3a2 2 0 102 2V3h2z"
-            ></path>
-          </svg>
-        </a>
+        <!-- Instagram / Facebook / TikTok -->
       </div>
     </div>
   </section>
