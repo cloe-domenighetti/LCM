@@ -2575,6 +2575,26 @@ const { title = "Association LCM" } = Astro.props;
         flex-wrap: wrap;
       }
 
+      .registration-contact-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .registration-contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        min-width: 300px;
+      }
+
+      .registration-contact-actions .registration-button {
+        width: 100%;
+        min-width: 0;
+      }
+
       .registration-contact-person {
         display: flex;
         flex-direction: column;
@@ -2647,8 +2667,21 @@ const { title = "Association LCM" } = Astro.props;
         .masterclass-note {
           text-align: left;
         }
-      }
 
+        /* Inscription cours collectifs */
+        .registration-contact-content {
+          grid-template-columns: 1fr;
+        }
+
+        .registration-contact-actions {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .registration-contact-actions .registration-button {
+          width: 100%;
+        }
+      }
       @media (max-width: 650px) {
         .tarifs-hero {
           padding: 2.5rem 1.5rem 1rem;
