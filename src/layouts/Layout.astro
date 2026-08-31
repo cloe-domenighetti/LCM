@@ -1286,18 +1286,20 @@ const { title = "Association LCM" } = Astro.props;
       /* En-tête du tableau */
 
       .schedule-table-header,
+      .schedule-table-header,
       .schedule-row {
         display: grid;
+
         grid-template-columns:
-          minmax(135px, 0.9fr)
-          minmax(190px, 1.6fr)
-          minmax(115px, 0.8fr)
-          minmax(110px, 0.7fr);
+          minmax(130px, 0.9fr)
+          minmax(150px, 1.2fr)
+          minmax(100px, 0.7fr)
+          minmax(180px, 1.3fr)
+          minmax(100px, 0.7fr);
 
         align-items: center;
         column-gap: 1.5rem;
       }
-
       .schedule-table-header {
         padding: 0.9rem 1.8rem;
 
@@ -1310,6 +1312,12 @@ const { title = "Association LCM" } = Astro.props;
         font-weight: bold;
         letter-spacing: 1.3px;
         text-transform: uppercase;
+      }
+
+      .schedule-location {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.4;
       }
 
       /* Lignes du planning */
@@ -1470,10 +1478,12 @@ const { title = "Association LCM" } = Astro.props;
 
         .schedule-row {
           grid-template-columns: 1fr auto;
+
           grid-template-areas:
             "time teacher"
             "course course"
-            "capacity capacity";
+            "capacity capacity"
+            "location location";
 
           gap: 0.6rem 1rem;
 
@@ -1490,6 +1500,19 @@ const { title = "Association LCM" } = Astro.props;
 
         .schedule-capacity {
           grid-area: capacity;
+        }
+
+        .schedule-location {
+          grid-area: location;
+
+          margin-top: 0.2rem;
+
+          color: #666;
+          font-size: 0.9rem;
+        }
+
+        .schedule-location::before {
+          content: "📍 ";
         }
 
         .schedule-teacher {
@@ -2286,6 +2309,77 @@ const { title = "Association LCM" } = Astro.props;
         max-width: 750px;
       }
 
+      /* =========================
+   TARIFS — CONTACT INSCRIPTION
+========================= */
+
+      .registration-contact {
+        margin-top: 2rem;
+        padding: 1.6rem;
+
+        background: rgba(115, 30, 97, 0.06);
+        border: 1px solid rgba(115, 30, 97, 0.18);
+        border-radius: 16px;
+
+        text-align: center;
+      }
+
+      .registration-contact h4 {
+        margin: 0 0 0.6rem;
+
+        color: #731e61;
+        font-size: 1.35rem;
+      }
+
+      .registration-contact > p {
+        margin: 0 auto 1.4rem;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .registration-contact-list {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .registration-contact-person {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        min-width: 220px;
+        padding: 1rem 1.4rem;
+
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      }
+
+      .registration-contact-person strong {
+        color: #03084c;
+        font-size: 1.05rem;
+      }
+
+      .registration-contact-person span {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .registration-contact-person a {
+        margin-top: 0.35rem;
+
+        color: #731e61;
+        font-size: 1.05rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .registration-contact-person a:hover {
+        text-decoration: underline;
+      }
+
       /* =========================================================
    PAGE TARIFS — RESPONSIVE
 ========================================================= */
@@ -2827,12 +2921,109 @@ const { title = "Association LCM" } = Astro.props;
           padding-top: 4rem;
         }
       }
+
+      /* =========================
+   MENU MOBILE
+========================= */
+
+      .menu-toggle {
+        display: none;
+      }
+
+      /* Téléphone / tablette */
+      @media (max-width: 900px) {
+        header {
+          height: 75px;
+          align-items: center;
+          padding: 0 1rem 0 0;
+        }
+
+        .logo-mini {
+          height: 75px;
+        }
+
+        .menu-toggle {
+          display: block;
+
+          margin-left: auto;
+
+          background: transparent;
+          color: white;
+
+          border: none;
+
+          font-size: 2rem;
+          line-height: 1;
+
+          cursor: pointer;
+        }
+
+        .header-right {
+          display: none;
+
+          position: absolute;
+
+          top: 75px;
+          left: 0;
+          right: 0;
+
+          padding: 0;
+
+          background: #06031e;
+
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .header-right.open {
+          display: flex;
+        }
+
+        .header-right nav {
+          width: 100%;
+
+          flex-direction: column;
+          align-items: stretch;
+
+          gap: 0;
+        }
+
+        .header-right nav a {
+          width: 100%;
+
+          padding: 1rem 1.5rem;
+
+          border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+          text-align: center;
+        }
+
+        .location {
+          width: 100%;
+
+          padding: 0.8rem 1rem;
+
+          text-align: center;
+        }
+
+        .top-separator {
+          top: 75px;
+        }
+      }
     </style>
   </head>
 
   <body>
     <header>
       <img src="/images/logo_mini.jpeg" alt="Logo LCM" class="logo-mini" />
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
       <div class="header-right">
         <nav>
@@ -2847,7 +3038,6 @@ const { title = "Association LCM" } = Astro.props;
         <div class="location">Saint-Maximin-la-Sainte-Baume (83)</div>
       </div>
     </header>
-
     <div class="top-separator"></div>
 
     <div class="scroll-progress" aria-hidden="true">
@@ -3021,6 +3211,29 @@ const { title = "Association LCM" } = Astro.props;
       window.addEventListener("resize", updateScrollProgress);
 
       updateScrollProgress();
+    </script>
+
+    <script>
+      const menuToggle =
+        document.querySelector<HTMLButtonElement>(".menu-toggle");
+      const headerRight = document.querySelector<HTMLElement>(".header-right");
+
+      if (menuToggle && headerRight) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = headerRight.classList.toggle("open");
+
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        headerRight.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            headerRight.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+          });
+        });
+      }
     </script>
   </body>
 </html>

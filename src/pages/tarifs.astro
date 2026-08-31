@@ -18,10 +18,6 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <nav class="actus-navigation">
-      <a href="#masterclass" class="actus-navigation-button">
-        🎓 Masterclass
-      </a>
-
       <a href="#cours-collectifs" class="actus-navigation-button">
         🎭 Cours collectifs
       </a>
@@ -31,432 +27,382 @@ import Layout from "../layouts/Layout.astro";
       </a>
     </nav>
 
-    <section id="masterclass" class="tarifs-section masterclass-section">
-      <section id="cours-collectifs" class="tarifs-section collective-section">
-        <section id="cours-particuliers" class="tarifs-section private-section">
-          <!-- =========================
-         1. OFFRE DÉCOUVERTE
-    ========================== -->
-
-          <section class="tarifs-section masterclass-section">
-            <article class="masterclass-card">
-              <div class="masterclass-content">
-                <span class="tarifs-eyebrow">Offre découverte</span>
-
-                <h2>Masterclass : Les résonateurs</h2>
-
-                <p class="masterclass-intro">
-                  Découvrez notre Masterclass animée par Chris !
-                </p>
-
-                <ul class="masterclass-details">
-                  <li>
-                    <strong>Date :</strong>
-                    samedi 22 août 2026
-                  </li>
-
-                  <li>
-                    <strong>Horaires :</strong>
-                    de 13h30 à 18h30
-                  </li>
-
-                  <li>
-                    <strong>Lieu :</strong>
-                    Salle des Fêtes de Saint-Maximin-la-Sainte-Baume
-                  </li>
-                </ul>
-              </div>
-
-              <div class="masterclass-action">
-                <span class="masterclass-price-label">Tarif découverte</span>
-
-                <div class="masterclass-price">40 €</div>
-
-                <span class="masterclass-price-detail"> par participant </span>
-
-                <a
-                  href="https://www.helloasso.com/associations/lcmspectacle-l-art-de-la-comedie-musical/evenements/mastreclasse"
-                  class="masterclass-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Je m’inscris à la masterclass 🎓
-                </a>
-              </div>
-            </article>
-          </section>
-
-          <!-- =========================
+    <!-- =========================
          2. COURS COLLECTIFS
     ========================== -->
 
-          <section class="tarifs-section collective-section">
-            <div class="tarifs-section-heading">
-              <span class="tarifs-eyebrow"> Formule annuelle </span>
+    <section id="cours-collectifs" class="tarifs-section collective-section">
+      <div class="tarifs-section-heading">
+        <span class="tarifs-eyebrow"> Formule annuelle </span>
 
-              <h2>Cours collectifs</h2>
+        <h2>Cours collectifs</h2>
 
-              <p>
-                Rejoignez l’un de nos cours collectifs de comédie musicale, de
-                chant ou de théâtre pour la saison 2026-2027.
-              </p>
+        <p>
+          Rejoignez l’un de nos cours collectifs de comédie musicale, de chant
+          ou de théâtre pour la saison 2026-2027.
+        </p>
+      </div>
+
+      <!-- TARIFS COURS COLLECTIFS -->
+
+      <article class="tarifs-card collective-card">
+        <div class="tarifs-card-header">
+          <div>
+            <span class="tarifs-card-label"> Tarifs </span>
+
+            <h3>Une formule unique pour toute la saison</h3>
+          </div>
+
+          <span class="tarifs-card-badge"> Saison 2026-2027 </span>
+        </div>
+
+        <div class="collective-price-grid">
+          <div class="collective-price-item">
+            <div class="collective-price-text">
+              <span class="collective-price-title">
+                Abonnement aux cours collectifs
+              </span>
+
+              <span class="collective-price-description">
+                Pour le créneau choisi lors de l’inscription
+              </span>
             </div>
 
-            <!-- TARIFS COURS COLLECTIFS -->
+            <div class="collective-price-value">
+              <strong>60 €</strong>
+              <span>par mois</span>
+            </div>
+          </div>
 
-            <article class="tarifs-card collective-card">
-              <div class="tarifs-card-header">
-                <div>
-                  <span class="tarifs-card-label"> Tarifs </span>
+          <div class="collective-price-item">
+            <div class="collective-price-text">
+              <span class="collective-price-title">
+                Cotisation à l’association
+              </span>
 
-                  <h3>Une formule unique pour toute la saison</h3>
-                </div>
+              <span class="collective-price-description">
+                Réglée une seule fois pour la saison
+              </span>
+            </div>
 
-                <span class="tarifs-card-badge"> Saison 2026-2027 </span>
-              </div>
+            <div class="collective-price-value">
+              <strong>50 €</strong>
+              <span>par an</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="collective-price-grid">
-                <div class="collective-price-item">
-                  <div class="collective-price-text">
-                    <span class="collective-price-title">
-                      Abonnement aux cours collectifs
-                    </span>
+        <div class="collective-summary">
+          L’inscription aux cours collectifs comprend un abonnement mensuel de
+          <strong>60 €</strong>, auquel s’ajoute une cotisation annuelle de
+          <strong>50 €</strong>.
+        </div>
+      </article>
 
-                    <span class="collective-price-description">
-                      Pour le créneau choisi lors de l’inscription
-                    </span>
-                  </div>
+      <!-- INSCRIPTION COURS COLLECTIFS -->
 
-                  <div class="collective-price-value">
-                    <strong>60 €</strong>
-                    <span>par mois</span>
-                  </div>
-                </div>
+      <article class="tarifs-card registration-card">
+        <div class="tarifs-card-header">
+          <div>
+            <span class="tarifs-card-label"> Inscription </span>
 
-                <div class="collective-price-item">
-                  <div class="collective-price-text">
-                    <span class="collective-price-title">
-                      Cotisation à l’association
-                    </span>
+            <h3>Comment s’inscrire aux cours collectifs ?</h3>
+          </div>
+        </div>
 
-                    <span class="collective-price-description">
-                      Réglée une seule fois pour la saison
-                    </span>
-                  </div>
+        <div class="registration-steps">
+          <!-- ÉTAPE 1 -->
 
-                  <div class="collective-price-value">
-                    <strong>50 €</strong>
-                    <span>par an</span>
-                  </div>
-                </div>
-              </div>
+          <div class="registration-step">
+            <span class="registration-step-number">1</span>
 
-              <div class="collective-summary">
-                L’inscription aux cours collectifs comprend un abonnement
-                mensuel de
-                <strong>60 €</strong>, auquel s’ajoute une cotisation annuelle
-                de
-                <strong>50 €</strong>.
-              </div>
-            </article>
+            <div class="registration-step-content">
+              <h4>Télécharger et compléter les documents</h4>
 
-            <!-- INSCRIPTION COURS COLLECTIFS -->
+              <p>
+                Merci de télécharger, compléter et signer les documents
+                nécessaires à votre inscription.
+              </p>
 
-            <article class="tarifs-card registration-card">
-              <div class="tarifs-card-header">
-                <div>
-                  <span class="tarifs-card-label"> Inscription </span>
-
-                  <h3>Comment s’inscrire aux cours collectifs ?</h3>
-                </div>
-              </div>
-
-              <div class="registration-steps">
-                <!-- ÉTAPE 1 -->
-
-                <div class="registration-step">
-                  <span class="registration-step-number">1</span>
-
-                  <div class="registration-step-content">
-                    <h4>Télécharger et compléter les documents</h4>
-
-                    <p>
-                      Merci de télécharger, compléter et signer les documents
-                      nécessaires à votre inscription.
-                    </p>
-
-                    <div class="documents-buttons">
-                      <a
-                        href="/docs/Fiche_inscription_LCM.pdf"
-                        class="inscription-button"
-                        download
-                      >
-                        Fiche d’inscription
-                      </a>
-
-                      <a
-                        href="/docs/cgv.pdf"
-                        class="inscription-button"
-                        download
-                      >
-                        Règlement intérieur & CGV
-                      </a>
-
-                      <a
-                        href="/docs/protection_donnees.pdf"
-                        class="inscription-button"
-                        download
-                      >
-                        Politique de protection des données personnelles
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ÉTAPE 2 -->
-
-                <div class="registration-step">
-                  <span class="registration-step-number">2</span>
-
-                  <div class="registration-step-content">
-                    <h4>Finaliser l’inscription</h4>
-
-                    <ul class="registration-list">
-                      <li>Remise du dossier complété et signé</li>
-
-                      <li>
-                        Règlement de la cotisation annuelle de
-                        <strong>50 €</strong>
-                      </li>
-
-                      <li>
-                        Règlement de l’abonnement aux cours collectifs, via
-                        HelloAsso, par virement bancaire ou par chèque
-                      </li>
-
-                      <li>
-                        Mandat SEPA accompagné d’un RIB uniquement en cas de
-                        prélèvement bancaire auprès de l’association
-                      </li>
-
-                      <li>Photo récente pour une première inscription</li>
-
-                      <li>Attestation d’assurance responsabilité civile</li>
-                    </ul>
-
-                    <p class="registration-note">
-                      <br />La photo et l’attestation d’assurance responsabilité
-                      civile peuvent être remises au secrétariat dans le premier
-                      mois suivant l’inscription.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="registration-actions">
+              <div class="documents-buttons">
                 <a
-                  href="LIEN_HELLOASSO_INSCRIPTION"
-                  class="registration-button primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/docs/Fiche_inscription_LCM.pdf"
+                  class="inscription-button"
+                  download
                 >
-                  Je m’inscris sur HelloAsso
+                  Fiche d’inscription
                 </a>
 
-                <span class="registration-button secondary disabled">
-                  Je m'inscris à l'accueil
-                </span>
+                <a href="/docs/cgv.pdf" class="inscription-button" download>
+                  Règlement intérieur & CGV
+                </a>
+
+                <a
+                  href="/docs/protection_donnees.pdf"
+                  class="inscription-button"
+                  download
+                >
+                  Politique de protection des données personnelles
+                </a>
               </div>
+            </div>
+          </div>
 
-              <p class="registration-validation">
-                L’inscription devient définitive après réception du dossier et
-                du règlement. Les places sont attribuées dans la limite des
-                disponibilités.
+          <!-- ÉTAPE 2 -->
+
+          <div class="registration-step">
+            <span class="registration-step-number">2</span>
+
+            <div class="registration-step-content">
+              <h4>Finaliser l’inscription</h4>
+
+              <ul class="registration-list">
+                <li>Remise du dossier complété et signé</li>
+
+                <li>
+                  Règlement de la cotisation annuelle de
+                  <strong>50 €</strong>
+                </li>
+
+                <li>
+                  Règlement de l’abonnement aux cours collectifs par virement
+                  bancaire ou par chèque
+                </li>
+
+                <li>
+                  Mandat SEPA accompagné d’un RIB uniquement en cas de
+                  prélèvement bancaire auprès de l’association
+                </li>
+
+                <li>Photo récente pour une première inscription</li>
+
+                <li>Attestation d’assurance responsabilité civile</li>
+              </ul>
+
+              <p class="registration-note">
+                <br />La photo et l’attestation d’assurance responsabilité
+                civile peuvent être remises au secrétariat dans le premier mois
+                suivant l’inscription.
               </p>
-            </article>
-          </section>
+            </div>
+          </div>
+        </div>
 
-          <!-- =========================
+        <div class="registration-contact">
+          <h4>Je m’inscris</h4>
+
+          <p>
+            Pour vous inscrire ou obtenir plus d’informations, contactez
+            directement l’un de nos responsables :
+          </p>
+
+          <div class="registration-contact-list">
+            <div class="registration-contact-person">
+              <strong>Chris Mam</strong>
+              <span>Coach vocal</span>
+              <a href="tel:+33652922935">06 52 92 29 35</a>
+            </div>
+
+            <div class="registration-contact-person">
+              <strong>Joan</strong>
+              <span>Direction technique</span>
+              <a href="tel:+33765404040">07 65 40 40 40</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="registration-validation">
+          L’inscription devient définitive après réception du dossier et du
+          règlement. Les places sont attribuées dans la limite des
+          disponibilités.
+        </p>
+      </article>
+    </section>
+
+    <!-- =========================
          3. COURS PARTICULIERS
     ========================== -->
 
-          <section class="tarifs-section private-section">
-            <div class="tarifs-section-heading">
-              <span class="tarifs-eyebrow"> Accompagnement personnalisé </span>
+    <section id="cours-particuliers" class="tarifs-section private-section">
+      <div class="tarifs-section-heading">
+        <span class="tarifs-eyebrow"> Accompagnement personnalisé </span>
 
-              <h2>Cours particuliers</h2>
+        <h2>Cours particuliers</h2>
 
-              <p>
-                Bénéficiez d’un accompagnement individuel adapté à vos objectifs
-                : technique vocale, interprétation, théâtre ou préparation à une
-                audition.
-              </p>
+        <p>
+          Bénéficiez d’un accompagnement individuel adapté à vos objectifs :
+          technique vocale, interprétation, théâtre ou préparation à une
+          audition.
+        </p>
+      </div>
+
+      <!-- TARIFS COURS PARTICULIERS -->
+
+      <article class="tarifs-card">
+        <div class="tarifs-card-header">
+          <div>
+            <span class="tarifs-card-label"> Tarifs </span>
+
+            <h3>Un tarif dégressif selon votre rythme</h3>
+          </div>
+
+          <span class="tarifs-card-badge"> Cours d’une heure </span>
+        </div>
+
+        <p class="private-prices-intro">
+          Le tarif horaire diminue en fonction du nombre de cours réservés
+          chaque mois.
+        </p>
+
+        <p class="private-prices-intro">
+          <b>Cotisation à l'association</b>, réglée en une seule fois pour la
+          saison : 50€
+        </p>
+
+        <div class="private-prices-table">
+          <div class="private-prices-header">
+            <span>Formule mensuelle</span>
+            <span>Tarif horaire</span>
+            <span>Total mensuel</span>
+          </div>
+
+          <div class="private-price-row">
+            <div class="private-price-frequency">
+              <strong>1 cours par mois</strong>
+              <span>1 heure de cours</span>
             </div>
 
-            <!-- TARIFS COURS PARTICULIERS -->
+            <div class="private-price-rate">
+              <strong>62 €</strong>
+              <span>par heure</span>
+            </div>
 
-            <article class="tarifs-card">
-              <div class="tarifs-card-header">
-                <div>
-                  <span class="tarifs-card-label"> Tarifs </span>
+            <div class="private-price-total">62 € par mois</div>
+          </div>
 
-                  <h3>Un tarif dégressif selon votre rythme</h3>
-                </div>
+          <div class="private-price-row">
+            <div class="private-price-frequency">
+              <strong>2 cours par mois</strong>
+              <span>2 heures de cours</span>
+            </div>
 
-                <span class="tarifs-card-badge"> Cours d’une heure </span>
-              </div>
+            <div class="private-price-rate">
+              <strong>52 €</strong>
+              <span>par heure</span>
+            </div>
 
-              <p class="private-prices-intro">
-                Le tarif horaire diminue en fonction du nombre de cours réservés
-                chaque mois.
+            <div class="private-price-total">104 € par mois</div>
+          </div>
+
+          <div class="private-price-row">
+            <div class="private-price-frequency">
+              <strong>3 cours par mois</strong>
+              <span>3 heures de cours</span>
+            </div>
+
+            <div class="private-price-rate">
+              <strong>42 €</strong>
+              <span>par heure</span>
+            </div>
+
+            <div class="private-price-total">126 € par mois</div>
+          </div>
+
+          <div class="private-price-row private-price-featured">
+            <div class="private-price-frequency">
+              <strong>4 cours par mois</strong>
+              <span>4 heures de cours</span>
+            </div>
+
+            <div class="private-price-rate">
+              <strong>32 €</strong>
+              <span>par heure</span>
+            </div>
+
+            <div class="private-price-total">128 € par mois</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RÉSERVATION COURS PARTICULIERS -->
+
+      <article class="tarifs-card private-registration-card">
+        <div class="tarifs-card-header">
+          <div>
+            <span class="tarifs-card-label"> Réservation </span>
+
+            <h3>Comment réserver un cours particulier ?</h3>
+          </div>
+        </div>
+
+        <div class="private-registration-content">
+          <div class="private-registration-step">
+            <span class="registration-step-number">1</span>
+
+            <div>
+              <h4>Prendre rendez-vous avec l’équipe</h4>
+
+              <p>
+                Contactez-nous afin de définir vos objectifs, le nombre de cours
+                souhaité et les créneaux disponibles.
               </p>
+            </div>
+          </div>
 
-              <p class="private-prices-intro">
-                <b>Cotisation à l'association</b>, réglée en une seule fois pour
-                la saison : 50€
+          <div class="private-registration-step">
+            <span class="registration-step-number">2</span>
+
+            <div>
+              <h4>Valider les créneaux</h4>
+
+              <p>
+                Le ou les cours sont réservés après confirmation du planning
+                avec l’intervenant.
               </p>
+            </div>
+          </div>
 
-              <div class="private-prices-table">
-                <div class="private-prices-header">
-                  <span>Formule mensuelle</span>
-                  <span>Tarif horaire</span>
-                  <span>Total mensuel</span>
-                </div>
+          <div class="private-registration-step">
+            <span class="registration-step-number">3</span>
 
-                <div class="private-price-row">
-                  <div class="private-price-frequency">
-                    <strong>1 cours par mois</strong>
-                    <span>1 heure de cours</span>
-                  </div>
+            <div>
+              <h4>Effectuer le règlement</h4>
 
-                  <div class="private-price-rate">
-                    <strong>62 €</strong>
-                    <span>par heure</span>
-                  </div>
-
-                  <div class="private-price-total">62 € par mois</div>
-                </div>
-
-                <div class="private-price-row">
-                  <div class="private-price-frequency">
-                    <strong>2 cours par mois</strong>
-                    <span>2 heures de cours</span>
-                  </div>
-
-                  <div class="private-price-rate">
-                    <strong>52 €</strong>
-                    <span>par heure</span>
-                  </div>
-
-                  <div class="private-price-total">104 € par mois</div>
-                </div>
-
-                <div class="private-price-row">
-                  <div class="private-price-frequency">
-                    <strong>3 cours par mois</strong>
-                    <span>3 heures de cours</span>
-                  </div>
-
-                  <div class="private-price-rate">
-                    <strong>42 €</strong>
-                    <span>par heure</span>
-                  </div>
-
-                  <div class="private-price-total">126 € par mois</div>
-                </div>
-
-                <div class="private-price-row private-price-featured">
-                  <div class="private-price-frequency">
-                    <strong>4 cours par mois</strong>
-                    <span>4 heures de cours</span>
-                  </div>
-
-                  <div class="private-price-rate">
-                    <strong>32 €</strong>
-                    <span>par heure</span>
-                  </div>
-
-                  <div class="private-price-total">128 € par mois</div>
-                </div>
-              </div>
-            </article>
-
-            <!-- RÉSERVATION COURS PARTICULIERS -->
-
-            <article class="tarifs-card private-registration-card">
-              <div class="tarifs-card-header">
-                <div>
-                  <span class="tarifs-card-label"> Réservation </span>
-
-                  <h3>Comment réserver un cours particulier ?</h3>
-                </div>
-              </div>
-
-              <div class="private-registration-content">
-                <div class="private-registration-step">
-                  <span class="registration-step-number">1</span>
-
-                  <div>
-                    <h4>Prendre rendez-vous avec l’équipe</h4>
-
-                    <p>
-                      Contactez-nous afin de définir vos objectifs, le nombre de
-                      cours souhaité et les créneaux disponibles.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="private-registration-step">
-                  <span class="registration-step-number">2</span>
-
-                  <div>
-                    <h4>Valider les créneaux</h4>
-
-                    <p>
-                      Le ou les cours sont réservés après confirmation du
-                      planning avec l’intervenant.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="private-registration-step">
-                  <span class="registration-step-number">3</span>
-
-                  <div>
-                    <h4>Effectuer le règlement</h4>
-
-                    <p>
-                      Une fois les créneaux validés, le règlement peut être
-                      effectué via HelloAsso ou directement à l’accueil de
-                      l’association.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="registration-actions">
-                <a href="/#contact" class="registration-button secondary">
-                  Prendre rendez-vous
-                </a>
-
-                <a
-                  href="LIEN_HELLOASSO_COURS_PARTICULIERS"
-                  class="registration-button primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Régler sur HelloAsso
-                </a>
-              </div>
-
-              <p class="registration-note private-payment-note">
-                Le paiement doit être effectué uniquement après validation du ou
-                des créneaux avec l’équipe LCM.
+              <p>
+                Une fois les créneaux validés, le règlement peut être effectué
+                directement à l’accueil de l’association.
               </p>
-            </article>
-          </section>
-        </section>
-      </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="registration-contact">
+          <h4>Je réserve mon cours</h4>
+
+          <p>
+            Pour connaître les disponibilités et réserver un cours particulier,
+            contactez directement :
+          </p>
+
+          <div class="registration-contact-list">
+            <div class="registration-contact-person">
+              <strong>Chris Mam</strong>
+              <span>Coach vocal</span>
+              <a href="tel:+33652922935">06 52 92 29 35</a>
+            </div>
+
+            <div class="registration-contact-person">
+              <strong>Cloé</strong>
+              <span>Coach vocal</span>
+              <a href="tel:+33603832310">06 03 83 23 10</a>
+            </div>
+          </div>
+        </div>
+        <p class="registration-note private-payment-note">
+          Le paiement doit être effectué uniquement après validation du ou des
+          créneaux avec l’équipe LCM.
+        </p>
+      </article>
     </section>
-  </div></Layout
->
+  </div>
+</Layout>

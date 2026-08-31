@@ -5,8 +5,8 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Cours & planning - LCM">
   <div class="planning-page scroll-reveal">
     <!-- =========================
-       EN-TÊTE DE LA PAGE
-  ========================== -->
+         EN-TÊTE DE LA PAGE
+    ========================== -->
 
     <section class="planning-hero">
       <h1 class="planning-title">Cours & planning</h1>
@@ -18,108 +18,59 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- =========================
-       INFORMATION SAISON
-  ========================== -->
+         INFORMATION SAISON
+    ========================== -->
 
     <section class="planning-intro">
       <div class="planning-season">
         <span class="planning-season-label">Saison 2026-2027</span>
 
         <p>
-          Les cours sont organisés par tranche d’âge et par niveau, dans la
-          limite des places disponibles. <br />
-          <b
-            >Les créneaux indiqués sont susceptibles d'être adaptés en fonction
-            du nombre d'inscrits.</b
-          >
+          Les cours sont organisés par tranche d’âge, dans la limite des places
+          disponibles.<br />
+          <b>
+            Les créneaux indiqués sont susceptibles d'être adaptés en fonction
+            du nombre d'inscrits.
+          </b>
         </p>
       </div>
     </section>
 
     <!-- =========================
-       PLANNING PAR JOUR
-  ========================== -->
+         PLANNING PAR JOUR
+    ========================== -->
 
     <section class="schedule-grid">
-      <!-- MERCREDI -->
+      <!-- MARDI -->
 
       <article class="schedule-day">
         <header class="schedule-day-header">
           <div>
             <p class="schedule-day-label">Planning hebdomadaire</p>
-            <h2>Mercredi</h2>
+            <h2>Mardi</h2>
           </div>
 
-          <span class="schedule-day-count">7 créneaux</span>
+          <span class="schedule-day-count">4 créneaux</span>
         </header>
 
         <div class="schedule-table-header">
           <span>Horaire</span>
           <span>Cours</span>
           <span>Places</span>
+          <span>Lieu</span>
           <span>Intervenant</span>
-        </div>
-
-        <div class="schedule-row">
-          <div class="schedule-time">10h00 – 12h00</div>
-
-          <div class="schedule-course">
-            <strong>Enfants</strong>
-            <span>6 à 12 ans</span>
-          </div>
-
-          <div class="schedule-capacity">10 élèves</div>
-
-          <div class="schedule-teacher teacher-cloe">Cloé</div>
-        </div>
-
-        <div class="schedule-row">
-          <div class="schedule-time">13h30 – 14h30</div>
-
-          <div class="schedule-course">
-            <strong>Enfants</strong>
-            <span>6 à 12 ans</span>
-          </div>
-
-          <div class="schedule-capacity">10 élèves</div>
-
-          <div class="schedule-teacher teacher-cloe">Cloé</div>
-        </div>
-
-        <div class="schedule-row">
-          <div class="schedule-time">14h30 – 15h30</div>
-
-          <div class="schedule-course">
-            <strong>Enfants</strong>
-            <span>6 à 12 ans</span>
-          </div>
-
-          <div class="schedule-capacity">10 élèves</div>
-
-          <div class="schedule-teacher teacher-cloe">Cloé</div>
-        </div>
-
-        <div class="schedule-row">
-          <div class="schedule-time">15h30 – 16h30</div>
-
-          <div class="schedule-course">
-            <strong>Adolescents</strong>
-            <span>12 à 17 ans</span>
-          </div>
-
-          <div class="schedule-capacity">10 élèves</div>
-
-          <div class="schedule-teacher teacher-cloe">Cloé</div>
         </div>
 
         <div class="schedule-row">
           <div class="schedule-time">17h00 – 18h00</div>
 
           <div class="schedule-course">
-            <strong>Ados / Adultes</strong>
+            <strong>Ados</strong>
           </div>
 
           <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
@@ -128,10 +79,12 @@ import Layout from "../layouts/Layout.astro";
           <div class="schedule-time">18h00 – 19h00</div>
 
           <div class="schedule-course">
-            <strong>Théâtre</strong>
+            <strong>Adultes</strong>
           </div>
 
           <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
@@ -143,9 +96,88 @@ import Layout from "../layouts/Layout.astro";
             <strong>Adultes</strong>
           </div>
 
-          <div class="schedule-capacity">12 élèves</div>
+          <div class="schedule-capacity">15 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">20h30 – 21h30</div>
+
+          <div class="schedule-course">
+            <strong>Théâtre</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
+
+          <div class="schedule-teacher teacher-chris">Chris</div>
+        </div>
+      </article>
+
+      <!-- MERCREDI -->
+
+      <article class="schedule-day">
+        <header class="schedule-day-header">
+          <div>
+            <p class="schedule-day-label">Planning hebdomadaire</p>
+            <h2>Mercredi</h2>
+          </div>
+
+          <span class="schedule-day-count">3 créneaux</span>
+        </header>
+
+        <div class="schedule-table-header">
+          <span>Horaire</span>
+          <span>Cours</span>
+          <span>Places</span>
+          <span>Lieu</span>
+          <span>Intervenant</span>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">10h00 – 11h00</div>
+
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Salle Micheline</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">11h00 – 12h00</div>
+
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+          </div>
+
+          <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Salle Micheline</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-time">13h00 – 14h00</div>
+
+          <div class="schedule-course">
+            <strong>Enfants</strong>
+          </div>
+
+          <div class="schedule-capacity">15 élèves</div>
+
+          <div class="schedule-location">Salle Micheline</div>
+
+          <div class="schedule-teacher teacher-cloe">Cloé</div>
         </div>
       </article>
 
@@ -165,6 +197,7 @@ import Layout from "../layouts/Layout.astro";
           <span>Horaire</span>
           <span>Cours</span>
           <span>Places</span>
+          <span>Lieu</span>
           <span>Intervenant</span>
         </div>
 
@@ -172,10 +205,12 @@ import Layout from "../layouts/Layout.astro";
           <div class="schedule-time">17h00 – 18h00</div>
 
           <div class="schedule-course">
-            <strong>Adolescents</strong>
+            <strong>Ados</strong>
           </div>
 
           <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
@@ -189,6 +224,8 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="schedule-capacity">10 élèves</div>
 
+          <div class="schedule-location">Maison du Bridge</div>
+
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
 
@@ -201,6 +238,8 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="schedule-capacity">15 élèves</div>
 
+          <div class="schedule-location">Maison du Bridge</div>
+
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
 
@@ -212,6 +251,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="schedule-capacity">10 élèves</div>
+
+          <div class="schedule-location">Maison du Bridge</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
@@ -233,11 +274,12 @@ import Layout from "../layouts/Layout.astro";
           <span>Horaire</span>
           <span>Cours</span>
           <span>Format</span>
+          <span>Lieu</span>
           <span>Intervenant</span>
         </div>
 
         <div class="schedule-row">
-          <div class="schedule-time">17h00 – 20h00</div>
+          <div class="schedule-time">17h00 – 19h00</div>
 
           <div class="schedule-course">
             <strong>Cours individuel</strong>
@@ -245,17 +287,7 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="schedule-capacity">Tranches de 30 min</div>
 
-          <div class="schedule-teacher teacher-chris">Chris</div>
-        </div>
-
-        <div class="schedule-row">
-          <div class="schedule-time">20h00 – 23h00</div>
-
-          <div class="schedule-course">
-            <strong>Répétitions</strong>
-          </div>
-
-          <div class="schedule-capacity">Accès libre</div>
+          <div class="schedule-location">Salle Orient Express</div>
 
           <div class="schedule-teacher teacher-chris">Chris</div>
         </div>
@@ -263,8 +295,8 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- =========================
-       INFORMATIONS COMPLÉMENTAIRES
-  ========================== -->
+         INFORMATIONS COMPLÉMENTAIRES
+    ========================== -->
 
     <section class="planning-notes">
       <div class="planning-note-card">
